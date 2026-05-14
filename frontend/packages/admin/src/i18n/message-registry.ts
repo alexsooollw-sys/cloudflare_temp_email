@@ -2,2561 +2,2561 @@ export const MESSAGE_REGISTRY = {
   "components.WebhookComponent": {
     "enable": {
       "en": "Enable",
-      "zh": "启用"
+      "ru": "Enable"
     },
     "fillInDemoTip": {
       "en": "Please modify the URL and other settings to your own",
-      "zh": "请修改URL和其他设置为您自己的配置"
+      "ru": "Please modify the URL and other settings to your own"
     },
     "notEnabled": {
       "en": "Webhook is not enabled for you",
-      "zh": "Webhook 未开启，请联系管理员开启"
+      "ru": "Webhook is not enabled for you"
     },
     "presets": {
       "en": "Presets",
-      "zh": "示例模板"
+      "ru": "Presets"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "test": {
       "en": "Test",
-      "zh": "测试"
+      "ru": "Test"
     },
     "urlMissing": {
       "en": "URL is required",
-      "zh": "URL 不能为空"
+      "ru": "URL is required"
     }
   },
   "components.MailBox": {
     "attachments": {
       "en": "Show Attachments",
-      "zh": "查看附件"
+      "ru": "Show Attachments"
     },
     "autoRefresh": {
       "en": "Auto Refresh",
-      "zh": "自动刷新"
+      "ru": "Auto Refresh"
     },
     "cancelMultiAction": {
       "en": "Cancel Multi Action",
-      "zh": "取消多选"
+      "ru": "Cancel Multi Action"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteMailTip": {
       "en": "Are you sure you want to delete mail?",
-      "zh": "确定要删除邮件吗?"
+      "ru": "Are you sure you want to delete mail?"
     },
     "downloadMail": {
       "en": "Download Mail",
-      "zh": "下载邮件"
+      "ru": "Download Mail"
     },
     "emptyInbox": {
       "en": "Your inbox is empty",
-      "zh": "收件箱为空"
+      "ru": "Your inbox is empty"
     },
     "forwardMail": {
       "en": "Forward",
-      "zh": "转发"
+      "ru": "Forward"
     },
     "keywordQueryTip": {
       "en": "Filter current page",
-      "zh": "过滤当前页"
+      "ru": "Filter current page"
     },
     "multiAction": {
       "en": "Multi Action",
-      "zh": "多选"
+      "ru": "Multi Action"
     },
     "nextMail": {
       "en": "Next",
-      "zh": "下一封"
+      "ru": "Next"
     },
     "pleaseSelectMail": {
       "en": "Please select mail",
-      "zh": "请选择邮件"
+      "ru": "Please select mail"
     },
     "prevMail": {
       "en": "Previous",
-      "zh": "上一封"
+      "ru": "Previous"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     },
     "refresh": {
       "en": "Refresh",
-      "zh": "刷新"
+      "ru": "Refresh"
     },
     "refreshAfter": {
       "en": "Refresh After {msg} Seconds",
-      "zh": "{msg}秒后刷新"
+      "ru": "Refresh After {msg} Seconds"
     },
     "reply": {
       "en": "Reply",
-      "zh": "回复"
+      "ru": "Reply"
     },
     "saveToS3": {
       "en": "Save to S3",
-      "zh": "保存到S3"
+      "ru": "Save to S3"
     },
     "selectAll": {
       "en": "Select All of This Page",
-      "zh": "全选本页"
+      "ru": "Select All of This Page"
     },
     "showHtmlMail": {
       "en": "Show Html Mail",
-      "zh": "显示HTML邮件"
+      "ru": "Show Html Mail"
     },
     "showTextMail": {
       "en": "Show Text Mail",
-      "zh": "显示纯文本邮件"
+      "ru": "Show Text Mail"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "unselectAll": {
       "en": "Unselect All",
-      "zh": "取消全选"
+      "ru": "Unselect All"
     }
   },
   "components.AiExtractInfo": {
     "authCode": {
       "en": "Verification Code",
-      "zh": "验证码"
+      "ru": "Verification Code"
     },
     "authLink": {
       "en": "Authentication Link",
-      "zh": "认证链接"
+      "ru": "Authentication Link"
     },
     "copyFailed": {
       "en": "Copy failed",
-      "zh": "复制失败"
+      "ru": "Copy failed"
     },
     "copySuccess": {
       "en": "Copied successfully",
-      "zh": "复制成功"
+      "ru": "Copied successfully"
     },
     "open": {
       "en": "Open",
-      "zh": "打开"
+      "ru": "Open"
     },
     "otherLink": {
       "en": "Other Link",
-      "zh": "其他链接"
+      "ru": "Other Link"
     },
     "serviceLink": {
       "en": "Service Link",
-      "zh": "服务链接"
+      "ru": "Service Link"
     },
     "subscriptionLink": {
       "en": "Subscription Link",
-      "zh": "订阅链接"
+      "ru": "Subscription Link"
     }
   },
   "components.MailContentRenderer": {
     "attachments": {
       "en": "View Attachments",
-      "zh": "查看附件"
+      "ru": "View Attachments"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteMailTip": {
       "en": "Are you sure you want to delete mail?",
-      "zh": "确定要删除邮件吗?"
+      "ru": "Are you sure you want to delete mail?"
     },
     "downloadMail": {
       "en": "Download Mail",
-      "zh": "下载邮件"
+      "ru": "Download Mail"
     },
     "forward": {
       "en": "Forward",
-      "zh": "转发"
+      "ru": "Forward"
     },
     "fullscreen": {
       "en": "Fullscreen",
-      "zh": "全屏"
+      "ru": "Fullscreen"
     },
     "reply": {
       "en": "Reply",
-      "zh": "回复"
+      "ru": "Reply"
     },
     "saveToS3": {
       "en": "Save to S3",
-      "zh": "保存到S3"
+      "ru": "Save to S3"
     },
     "showHtmlMail": {
       "en": "Show HTML Mail",
-      "zh": "显示HTML邮件"
+      "ru": "Show HTML Mail"
     },
     "showTextMail": {
       "en": "Show Text Mail",
-      "zh": "显示纯文本邮件"
+      "ru": "Show Text Mail"
     },
     "size": {
       "en": "Size",
-      "zh": "大小"
+      "ru": "Size"
     }
   },
   "components.Turnstile": {
     "refresh": {
       "en": "Refresh",
-      "zh": "刷新"
+      "ru": "Refresh"
     }
   },
   "components.SendBox": {
     "cancelMultiAction": {
       "en": "Cancel Multi Action",
-      "zh": "取消多选"
+      "ru": "Cancel Multi Action"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteMailTip": {
       "en": "Are you sure you want to delete mail?",
-      "zh": "确定要删除邮件吗?"
+      "ru": "Are you sure you want to delete mail?"
     },
     "emptySent": {
       "en": "No sent emails",
-      "zh": "发件箱为空"
+      "ru": "No sent emails"
     },
     "multiAction": {
       "en": "Multi Action",
-      "zh": "多选"
+      "ru": "Multi Action"
     },
     "pleaseSelectMail": {
       "en": "Please select a mail to view.",
-      "zh": "请选择一封邮件查看。"
+      "ru": "Please select a mail to view."
     },
     "refresh": {
       "en": "Refresh",
-      "zh": "刷新"
+      "ru": "Refresh"
     },
     "selectAll": {
       "en": "Select All of This Page",
-      "zh": "全选本页"
+      "ru": "Select All of This Page"
     },
     "showCode": {
       "en": "Change View Original Code",
-      "zh": "切换查看元数据"
+      "ru": "Change View Original Code"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "unselectAll": {
       "en": "Unselect All",
-      "zh": "取消全选"
+      "ru": "Unselect All"
     }
   },
   "components.AddressSelect": {
     "address": {
       "en": "Address",
-      "zh": "地址"
+      "ru": "Address"
     },
     "copied": {
       "en": "Copied",
-      "zh": "已复制"
+      "ru": "Copied"
     },
     "copy": {
       "en": "Copy",
-      "zh": "复制"
+      "ru": "Copy"
     },
     "localAddresses": {
       "en": "Local Addresses",
-      "zh": "本地地址"
+      "ru": "Local Addresses"
     },
     "userAddresses": {
       "en": "User Addresses",
-      "zh": "用户地址"
+      "ru": "User Addresses"
     }
   },
   "components.AddressCredentialModal": {
     "addressCredential": {
       "en": "Address Credential",
-      "zh": "地址凭证"
+      "ru": "Address Credential"
     },
     "addressCredentialLabel": {
       "en": "Address JWT",
-      "zh": "Address JWT"
+      "ru": "Address JWT"
     },
     "addressPassword": {
       "en": "Address Password",
-      "zh": "地址密码"
+      "ru": "Address Password"
     },
     "agentAccess": {
       "en": "AI Agent",
-      "zh": "AI Agent"
+      "ru": "AI Agent"
     },
     "agentAccessTip": {
       "en": "Use this mailbox from an AI agent with the Address JWT and parsed-mail APIs.",
-      "zh": "AI Agent 可使用 Address JWT 和 parsed-mail API 读取这个邮箱。"
+      "ru": "Use this mailbox from an AI agent with the Address JWT and parsed-mail APIs."
     },
     "agentConfig": {
       "en": "Agent config",
-      "zh": "Agent 配置"
+      "ru": "Agent config"
     },
     "agentSkill": {
       "en": "Agent skill",
-      "zh": "Agent skill"
+      "ru": "Agent skill"
     },
     "apiBase": {
       "en": "API Base",
-      "zh": "API 地址"
+      "ru": "API Base"
     },
     "autoLoginLink": {
       "en": "Auto-login link",
-      "zh": "自动登录链接"
+      "ru": "Auto-login link"
     },
     "copyFailed": {
       "en": "Copy failed",
-      "zh": "复制失败"
+      "ru": "Copy failed"
     },
     "copySection": {
       "en": "Copy",
-      "zh": "复制"
+      "ru": "Copy"
     },
     "copySuccess": {
       "en": "Copied",
-      "zh": "已复制"
+      "ru": "Copied"
     },
     "currentAddress": {
       "en": "Current address",
-      "zh": "当前邮箱"
+      "ru": "Current address"
     },
     "docs": {
       "en": "Docs",
-      "zh": "文档"
+      "ru": "Docs"
     },
     "imapHost": {
       "en": "IMAP host",
-      "zh": "IMAP 主机"
+      "ru": "IMAP host"
     },
     "imapPort": {
       "en": "IMAP port",
-      "zh": "IMAP 端口"
+      "ru": "IMAP port"
     },
     "password": {
       "en": "Password",
-      "zh": "密码"
+      "ru": "Password"
     },
     "plainOrProxyTls": {
       "en": "Plain or proxy TLS",
-      "zh": "明文或代理层 TLS"
+      "ru": "Plain or proxy TLS"
     },
     "security": {
       "en": "Security",
-      "zh": "安全"
+      "ru": "Security"
     },
     "smtpHost": {
       "en": "SMTP host",
-      "zh": "SMTP 主机"
+      "ru": "SMTP host"
     },
     "smtpImapAccess": {
       "en": "SMTP / IMAP",
-      "zh": "SMTP / IMAP"
+      "ru": "SMTP / IMAP"
     },
     "smtpImapTip": {
       "en": "Use these values in mail clients after the administrator configures the SMTP/IMAP proxy. The password can be the Address JWT shown here, or the address password when you have it.",
-      "zh": "管理员配置 SMTP/IMAP 代理后，可在邮件客户端中使用这些信息。密码可使用这里展示的 Address JWT，也可使用你持有的地址密码。"
+      "ru": "Use these values in mail clients after the administrator configures the SMTP/IMAP proxy. The password can be the Address JWT shown here, or the address password when you have it."
     },
     "smtpPort": {
       "en": "SMTP port",
-      "zh": "SMTP 端口"
+      "ru": "SMTP port"
     },
     "starttls": {
       "en": "STARTTLS",
-      "zh": "STARTTLS"
+      "ru": "STARTTLS"
     },
     "tip": {
       "en": "Use these credentials only with clients and agents you trust.",
-      "zh": "请只在可信的客户端和 Agent 中使用这些凭证。"
+      "ru": "Use these credentials only with clients and agents you trust."
     },
     "title": {
       "en": "Address Credentials & Connection Methods",
-      "zh": "地址凭证与连接方式"
+      "ru": "Address Credentials & Connection Methods"
     },
     "username": {
       "en": "Username",
-      "zh": "用户名"
+      "ru": "Username"
     }
   },
   "views.user.UserMailBox": {
     "addressQueryTip": {
       "en": "Leave blank to query all addresses",
-      "zh": "留空查询所有地址"
+      "ru": "Leave blank to query all addresses"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     }
   },
   "views.Index": {
     "about": {
       "en": "About",
-      "zh": "关于"
+      "ru": "About"
     },
     "accountSettings": {
       "en": "Account Settings",
-      "zh": "账户"
+      "ru": "Account Settings"
     },
     "appearance": {
       "en": "Appearance",
-      "zh": "外观"
+      "ru": "Appearance"
     },
     "auto_reply": {
       "en": "Auto Reply",
-      "zh": "自动回复"
+      "ru": "Auto Reply"
     },
     "enterSimpleMode": {
       "en": "Simple Mode",
-      "zh": "极简模式"
+      "ru": "Simple Mode"
     },
     "mailbox": {
       "en": "Mail Box",
-      "zh": "收件箱"
+      "ru": "Mail Box"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     },
     "s3Attachment": {
       "en": "S3 Attachment",
-      "zh": "S3附件"
+      "ru": "S3 Attachment"
     },
     "saveToS3Success": {
       "en": "save to s3 success",
-      "zh": "保存到s3成功"
+      "ru": "save to s3 success"
     },
     "sendbox": {
       "en": "Send Box",
-      "zh": "发件箱"
+      "ru": "Send Box"
     },
     "sendmail": {
       "en": "Send Mail",
-      "zh": "发送邮件"
+      "ru": "Send Mail"
     },
     "webhookSettings": {
       "en": "Webhook Settings",
-      "zh": "Webhook 设置"
+      "ru": "Webhook Settings"
     }
   },
   "views.Footer": {
     "copyright": {
       "en": "Copyright",
-      "zh": "版权所有"
+      "ru": "Copyright"
     }
   },
   "views.user.UserSettings": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "createPasskey": {
       "en": "Create Passkey",
-      "zh": "创建 Passkey"
+      "ru": "Create Passkey"
     },
     "created_at": {
       "en": "Created At",
-      "zh": "创建时间"
+      "ru": "Created At"
     },
     "deletePasskey": {
       "en": "Delete Passkey",
-      "zh": "删除 Passkey"
+      "ru": "Delete Passkey"
     },
     "logout": {
       "en": "Logout",
-      "zh": "退出登录"
+      "ru": "Logout"
     },
     "logoutConfirm": {
       "en": "Are you sure you want to logout?",
-      "zh": "确定要退出登录吗？"
+      "ru": "Are you sure you want to logout?"
     },
     "passkeyCreated": {
       "en": "Passkey created successfully",
-      "zh": "Passkey 创建成功"
+      "ru": "Passkey created successfully"
     },
     "passkeyNamePlaceholder": {
       "en": "Please enter the passkey name or leave it empty to generate a random one",
-      "zh": "请输入 Passkey 名称或者留空自动生成"
+      "ru": "Please enter the passkey name or leave it empty to generate a random one"
     },
     "passkey_name": {
       "en": "Passkey Name",
-      "zh": "Passkey 名称"
+      "ru": "Passkey Name"
     },
     "passordTip": {
       "en": "The server will only receive the hash value of the password, and will not receive the plaintext password, so it cannot view or retrieve your password. If the administrator enables email verification, you can reset the password in incognito mode",
-      "zh": "服务器只会接收到密码的哈希值，不会接收到明文密码，因此无法查看或者找回您的密码, 如果管理员启用了邮件验证您可以在无痕模式重置密码"
+      "ru": "The server will only receive the hash value of the password, and will not receive the plaintext password, so it cannot view or retrieve your password. If the administrator enables email verification, you can reset the password in incognito mode"
     },
     "renamePasskey": {
       "en": "Rename Passkey",
-      "zh": "重命名 Passkey"
+      "ru": "Rename Passkey"
     },
     "renamePasskeyNamePlaceholder": {
       "en": "Please enter the new passkey name",
-      "zh": "请输入新的 Passkey 名称"
+      "ru": "Please enter the new passkey name"
     },
     "showPasskeyList": {
       "en": "Show Passkey List",
-      "zh": "查看 Passkey 列表"
+      "ru": "Show Passkey List"
     },
     "updated_at": {
       "en": "Updated At",
-      "zh": "更新时间"
+      "ru": "Updated At"
     }
   },
   "views.Header": {
     "accessHeader": {
       "en": "Access Password",
-      "zh": "访问密码"
+      "ru": "Access Password"
     },
     "accessTip": {
       "en": "Please enter the correct access password",
-      "zh": "请输入站点访问密码"
+      "ru": "Please enter the correct access password"
     },
     "dark": {
       "en": "Dark",
-      "zh": "暗色"
+      "ru": "Dark"
     },
     "home": {
       "en": "Home",
-      "zh": "主页"
+      "ru": "Home"
     },
     "light": {
       "en": "Light",
-      "zh": "亮色"
+      "ru": "Light"
     },
     "menu": {
       "en": "Menu",
-      "zh": "菜单"
+      "ru": "Menu"
     },
     "ok": {
       "en": "OK",
-      "zh": "确定"
+      "ru": "OK"
     },
     "status": {
       "en": "Status",
-      "zh": "状态"
+      "ru": "Status"
     },
     "title": {
       "en": "Cloudflare Temp Email",
-      "zh": "Cloudflare 临时邮件"
+      "ru": "Cloudflare Temp Email"
     },
     "user": {
       "en": "User",
-      "zh": "用户"
+      "ru": "User"
     }
   },
   "views.user.BindAddress": {
     "logout": {
       "en": "Logout",
-      "zh": "退出登录"
+      "ru": "Logout"
     }
   },
   "views.Admin": {
     "about": {
       "en": "About",
-      "zh": "关于"
+      "ru": "About"
     },
     "accessHeader": {
       "en": "Admin Password",
-      "zh": "Admin 密码"
+      "ru": "Admin Password"
     },
     "accessTip": {
       "en": "Please enter the admin password",
-      "zh": "请输入 Admin 密码"
+      "ru": "Please enter the admin password"
     },
     "account": {
       "en": "Account",
-      "zh": "账号"
+      "ru": "Account"
     },
     "account_create": {
       "en": "Create Account",
-      "zh": "创建账号"
+      "ru": "Create Account"
     },
     "account_settings": {
       "en": "Account Settings",
-      "zh": "账号设置"
+      "ru": "Account Settings"
     },
     "adminAccount": {
       "en": "Admin",
-      "zh": "管理员"
+      "ru": "Admin"
     },
     "aiExtractSettings": {
       "en": "AI Extract Settings",
-      "zh": "AI 提取设置"
+      "ru": "AI Extract Settings"
     },
     "appearance": {
       "en": "Appearance",
-      "zh": "外观"
+      "ru": "Appearance"
     },
     "confirm": {
       "en": "Confirm",
-      "zh": "确认"
+      "ru": "Confirm"
     },
     "database": {
       "en": "Database",
-      "zh": "数据库"
+      "ru": "Database"
     },
     "ipBlacklistSettings": {
       "en": "IP Blacklist",
-      "zh": "IP 黑名单"
+      "ru": "IP Blacklist"
     },
     "loginMethod": {
       "en": "Login Method",
-      "zh": "登录方式"
+      "ru": "Login Method"
     },
     "loginViaDisabledCheck": {
       "en": "Disabled Password Check",
-      "zh": "已禁用密码检查"
+      "ru": "Disabled Password Check"
     },
     "loginViaPassword": {
       "en": "Admin Password Login",
-      "zh": "Admin 密码登录"
+      "ru": "Admin Password Login"
     },
     "loginViaUserAdmin": {
       "en": "User Admin Permission",
-      "zh": "用户管理员权限"
+      "ru": "User Admin Permission"
     },
     "logout": {
       "en": "Logout",
-      "zh": "退出登录"
+      "ru": "Logout"
     },
     "logoutConfirmContent": {
       "en": "Are you sure you want to logout from admin panel?",
-      "zh": "确定要退出管理员面板吗？"
+      "ru": "Are you sure you want to logout from admin panel?"
     },
     "logoutConfirmTitle": {
       "en": "Confirm Logout",
-      "zh": "确认退出"
+      "ru": "Confirm Logout"
     },
     "logoutSuccess": {
       "en": "Logout successful",
-      "zh": "退出成功"
+      "ru": "Logout successful"
     },
     "mailWebhook": {
       "en": "Mail Webhook",
-      "zh": "邮件 Webhook"
+      "ru": "Mail Webhook"
     },
     "mails": {
       "en": "Emails",
-      "zh": "邮件"
+      "ru": "Emails"
     },
     "maintenance": {
       "en": "Maintenance",
-      "zh": "维护"
+      "ru": "Maintenance"
     },
     "ok": {
       "en": "OK",
-      "zh": "确定"
+      "ru": "OK"
     },
     "qucickSetup": {
       "en": "Quick Setup",
-      "zh": "快速设置"
+      "ru": "Quick Setup"
     },
     "roleAddressConfig": {
       "en": "Role Address Config",
-      "zh": "角色地址配置"
+      "ru": "Role Address Config"
     },
     "sendBox": {
       "en": "Send Box",
-      "zh": "发件箱"
+      "ru": "Send Box"
     },
     "sendMail": {
       "en": "Send Mail",
-      "zh": "发送邮件"
+      "ru": "Send Mail"
     },
     "senderAccess": {
       "en": "Sender Access Control",
-      "zh": "发件权限控制"
+      "ru": "Sender Access Control"
     },
     "statistics": {
       "en": "Statistics",
-      "zh": "统计"
+      "ru": "Statistics"
     },
     "telegram": {
       "en": "Telegram Bot",
-      "zh": "电报机器人"
+      "ru": "Telegram Bot"
     },
     "unknow": {
       "en": "Mails with unknow receiver",
-      "zh": "无收件人邮件"
+      "ru": "Mails with unknow receiver"
     },
     "user": {
       "en": "User",
-      "zh": "用户"
+      "ru": "User"
     },
     "userOauth2Settings": {
       "en": "Oauth2 Settings",
-      "zh": "Oauth2 设置"
+      "ru": "Oauth2 Settings"
     },
     "user_management": {
       "en": "User Management",
-      "zh": "用户管理"
+      "ru": "User Management"
     },
     "user_settings": {
       "en": "User Settings",
-      "zh": "用户设置"
+      "ru": "User Settings"
     },
     "webhookSettings": {
       "en": "Webhook Settings",
-      "zh": "Webhook 设置"
+      "ru": "Webhook Settings"
     },
     "workerconfig": {
       "en": "Worker Config",
-      "zh": "Worker 配置"
+      "ru": "Worker Config"
     }
   },
   "views.User": {
     "address_management": {
       "en": "Address Management",
-      "zh": "地址管理"
+      "ru": "Address Management"
     },
     "bind_address": {
       "en": "Bind Mail Address",
-      "zh": "绑定邮箱地址"
+      "ru": "Bind Mail Address"
     },
     "user_mail_box_tab": {
       "en": "Mail Box",
-      "zh": "收件箱"
+      "ru": "Mail Box"
     },
     "user_settings": {
       "en": "User Settings",
-      "zh": "用户设置"
+      "ru": "User Settings"
     }
   },
   "views.user.UserLogin": {
     "cannotForgotPassword": {
       "en": "Mail verification is disabled or register is disabled, cannot reset password, please contact administrator",
-      "zh": "未开启邮箱验证或未开启注册功能，无法重置密码，请联系管理员"
+      "ru": "Mail verification is disabled or register is disabled, cannot reset password, please contact administrator"
     },
     "email": {
       "en": "Email",
-      "zh": "邮箱"
+      "ru": "Email"
     },
     "forgotPassword": {
       "en": "Forgot Password",
-      "zh": "忘记密码"
+      "ru": "Forgot Password"
     },
     "login": {
       "en": "Login",
-      "zh": "登录"
+      "ru": "Login"
     },
     "loginWith": {
       "en": "Login with {provider}",
-      "zh": "使用 {provider} 登录"
+      "ru": "Login with {provider}"
     },
     "loginWithPasskey": {
       "en": "Login with Passkey",
-      "zh": "使用 Passkey 登录"
+      "ru": "Login with Passkey"
     },
     "password": {
       "en": "Password",
-      "zh": "密码"
+      "ru": "Password"
     },
     "pleaseCompleteTurnstile": {
       "en": "Please complete turnstile",
-      "zh": "请完成人机验证"
+      "ru": "Please complete turnstile"
     },
     "pleaseInput": {
       "en": "Please input email and password",
-      "zh": "请输入邮箱和密码"
+      "ru": "Please input email and password"
     },
     "pleaseInputCode": {
       "en": "Please input code",
-      "zh": "请输入验证码"
+      "ru": "Please input code"
     },
     "pleaseInputEmail": {
       "en": "Please input email",
-      "zh": "请输入邮箱"
+      "ru": "Please input email"
     },
     "pleaseLogin": {
       "en": "Please login",
-      "zh": "请登录"
+      "ru": "Please login"
     },
     "register": {
       "en": "Register",
-      "zh": "注册"
+      "ru": "Register"
     },
     "resetPassword": {
       "en": "Reset Password",
-      "zh": "重置密码"
+      "ru": "Reset Password"
     },
     "sendVerificationCode": {
       "en": "Send Verification Code",
-      "zh": "发送验证码"
+      "ru": "Send Verification Code"
     },
     "verifyCode": {
       "en": "Verification Code",
-      "zh": "验证码"
+      "ru": "Verification Code"
     },
     "verifyCodeSent": {
       "en": "Verification Code Sent, expires in {timeout} seconds",
-      "zh": "验证码已发送, {timeout} 秒后失效"
+      "ru": "Verification Code Sent, expires in {timeout} seconds"
     },
     "waitforVerifyCode": {
       "en": "Wait for {timeout} seconds",
-      "zh": "等待{timeout}秒"
+      "ru": "Wait for {timeout} seconds"
     }
   },
   "views.user.UserBar": {
     "currentUser": {
       "en": "Current Login User",
-      "zh": "当前登录用户"
+      "ru": "Current Login User"
     },
     "fetchUserSettingsError": {
       "en": "Login password is invalid or account not exist, it may be network connection issue, please try again later.",
-      "zh": "登录信息已过期或账号不存在，也可能是网络连接异常，请稍后再尝试。"
+      "ru": "Login password is invalid or account not exist, it may be network connection issue, please try again later."
     }
   },
   "views.user.AddressManagement": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "address": {
       "en": "Address",
-      "zh": "地址"
+      "ru": "Address"
     },
     "changeMailAddress": {
       "en": "Change Address",
-      "zh": "切换地址"
+      "ru": "Change Address"
     },
     "create_or_bind": {
       "en": "Create or Bind",
-      "zh": "创建或绑定"
+      "ru": "Create or Bind"
     },
     "mail_count": {
       "en": "Mail Count",
-      "zh": "邮件数量"
+      "ru": "Mail Count"
     },
     "name": {
       "en": "Name",
-      "zh": "名称"
+      "ru": "Name"
     },
     "send_count": {
       "en": "Send Count",
-      "zh": "发送数量"
+      "ru": "Send Count"
     },
     "success": {
       "en": "success",
-      "zh": "成功"
+      "ru": "success"
     },
     "targetUserEmail": {
       "en": "Target User Email",
-      "zh": "目标用户邮箱"
+      "ru": "Target User Email"
     },
     "transferAddress": {
       "en": "Transfer Address",
-      "zh": "转移地址"
+      "ru": "Transfer Address"
     },
     "transferAddressTip": {
       "en": "Transfer address to another user will remove the address from your account and transfer it to another user. Are you sure to transfer the address?",
-      "zh": "转移地址到其他用户将会从你的账户中移除此地址并转移给其他用户。确定要转移地址吗？"
+      "ru": "Transfer address to another user will remove the address from your account and transfer it to another user. Are you sure to transfer the address?"
     },
     "unbindAddress": {
       "en": "Unbind Address",
-      "zh": "解绑地址"
+      "ru": "Unbind Address"
     },
     "unbindAddressTip": {
       "en": "Before unbinding, please switch to this email address and save the email address credential.",
-      "zh": "解绑前请切换到此邮箱地址并保存邮箱地址凭证。"
+      "ru": "Before unbinding, please switch to this email address and save the email address credential."
     }
   },
   "views.index.AccountSettings": {
     "changePassword": {
       "en": "Change Password",
-      "zh": "修改密码"
+      "ru": "Change Password"
     },
     "clearInbox": {
       "en": "Clear Inbox",
-      "zh": "清空收件箱"
+      "ru": "Clear Inbox"
     },
     "clearInboxConfirm": {
       "en": "Are you sure to clear all emails in your inbox?",
-      "zh": "确定要清空你收件箱中的所有邮件吗？"
+      "ru": "Are you sure to clear all emails in your inbox?"
     },
     "clearSentItems": {
       "en": "Clear Sent Items",
-      "zh": "清空发件箱"
+      "ru": "Clear Sent Items"
     },
     "clearSentItemsConfirm": {
       "en": "Are you sure to clear all emails in your sent items?",
-      "zh": "确定要清空你发件箱中的所有邮件吗？"
+      "ru": "Are you sure to clear all emails in your sent items?"
     },
     "confirmPassword": {
       "en": "Confirm Password",
-      "zh": "确认密码"
+      "ru": "Confirm Password"
     },
     "deleteAccount": {
       "en": "Delete Account",
-      "zh": "删除账户"
+      "ru": "Delete Account"
     },
     "deleteAccountConfirm": {
       "en": "Are you sure to delete your account and all emails for this account?",
-      "zh": "确定要删除你的账户和其中的所有邮件吗?"
+      "ru": "Are you sure to delete your account and all emails for this account?"
     },
     "logout": {
       "en": "Logout",
-      "zh": "退出登录"
+      "ru": "Logout"
     },
     "logoutConfirm": {
       "en": "Are you sure to logout?",
-      "zh": "确定要退出登录吗？"
+      "ru": "Are you sure to logout?"
     },
     "newPassword": {
       "en": "New Password",
-      "zh": "新密码"
+      "ru": "New Password"
     },
     "passwordChanged": {
       "en": "Password changed successfully",
-      "zh": "密码修改成功"
+      "ru": "Password changed successfully"
     },
     "passwordMismatch": {
       "en": "Passwords do not match",
-      "zh": "密码不匹配"
+      "ru": "Passwords do not match"
     },
     "showAddressCredential": {
       "en": "Credentials & Connection Methods",
-      "zh": "地址凭证与连接方式"
+      "ru": "Credentials & Connection Methods"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     }
   },
   "views.user.UserOauth2Callback": {
     "codeNotFound": {
       "en": "code not found",
-      "zh": "未找到授权码"
+      "ru": "code not found"
     },
     "logging": {
       "en": "Logging in...",
-      "zh": "登录中..."
+      "ru": "Logging in..."
     },
     "stateNotMatch": {
       "en": "state not match",
-      "zh": "state 不匹配"
+      "ru": "state not match"
     }
   },
   "views.index.Attachment": {
     "action": {
       "en": "Action",
-      "zh": "操作"
+      "ru": "Action"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteConfirm": {
       "en": "Are you sure to delete this attachment?",
-      "zh": "确定要删除此附件吗？"
+      "ru": "Are you sure to delete this attachment?"
     },
     "deleteSuccess": {
       "en": "Deleted successfully",
-      "zh": "删除成功"
+      "ru": "Deleted successfully"
     },
     "download": {
       "en": "Download",
-      "zh": "下载"
+      "ru": "Download"
     }
   },
   "views.index.AutoReply": {
     "autoReply": {
       "en": "Auto Reply",
-      "zh": "自动回复"
+      "ru": "Auto Reply"
     },
     "enableAutoReply": {
       "en": "Enable Auto Reply",
-      "zh": "启用自动回复"
+      "ru": "Enable Auto Reply"
     },
     "name": {
       "en": "Name",
-      "zh": "名称"
+      "ru": "Name"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "settings": {
       "en": "Settings",
-      "zh": "设置"
+      "ru": "Settings"
     },
     "sourcePrefix": {
       "en": "Sender Filter",
-      "zh": "发件人过滤"
+      "ru": "Sender Filter"
     },
     "sourcePrefixPlaceholder": {
       "en": "Empty=all, prefix match, or /regex/",
-      "zh": "留空=全部匹配，前缀匹配，或 /正则/"
+      "ru": "Empty=all, prefix match, or /regex/"
     },
     "subject": {
       "en": "Subject",
-      "zh": "主题"
+      "ru": "Subject"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     }
   },
   "views.index.SendMail": {
     "content": {
       "en": "Content",
-      "zh": "内容"
+      "ru": "Content"
     },
     "contentEmpty": {
       "en": "Content is empty",
-      "zh": "内容不能为空"
+      "ru": "Content is empty"
     },
     "edit": {
       "en": "Edit",
-      "zh": "编辑"
+      "ru": "Edit"
     },
     "fromName": {
       "en": "Your Name and Address, leave Name blank to use email address",
-      "zh": "你的名称和地址，名称不填写则使用邮箱地址"
+      "ru": "Your Name and Address, leave Name blank to use email address"
     },
     "html": {
       "en": "HTML",
-      "zh": "HTML"
+      "ru": "HTML"
     },
     "options": {
       "en": "Options",
-      "zh": "选项"
+      "ru": "Options"
     },
     "preview": {
       "en": "Preview",
-      "zh": "预览"
+      "ru": "Preview"
     },
     "requestAccess": {
       "en": "Request Access",
-      "zh": "申请权限"
+      "ru": "Request Access"
     },
     "requestAccessTip": {
       "en": "No send balance yet. If your admin enabled a default balance it should be assigned automatically; otherwise request access or contact the admin.",
-      "zh": "当前还没有可用的发信额度。如果管理员启用了默认额度，会自动发放；否则请申请权限或联系管理员处理。"
+      "ru": "No send balance yet. If your admin enabled a default balance it should be assigned automatically; otherwise request access or contact the admin."
     },
     "rich text": {
       "en": "Rich Text",
-      "zh": "富文本"
+      "ru": "Rich Text"
     },
     "send": {
       "en": "Send",
-      "zh": "发送"
+      "ru": "Send"
     },
     "send_balance": {
       "en": "Send Mail Balance Left",
-      "zh": "剩余发送邮件额度"
+      "ru": "Send Mail Balance Left"
     },
     "subject": {
       "en": "Subject",
-      "zh": "主题"
+      "ru": "Subject"
     },
     "subjectEmpty": {
       "en": "Subject is empty",
-      "zh": "主题不能为空"
+      "ru": "Subject is empty"
     },
     "successSend": {
       "en": "Please check your sendbox. If failed, please check your balance or try again later.",
-      "zh": "请查看您的发件箱, 如果失败, 请检查您的余额或稍后重试。"
+      "ru": "Please check your sendbox. If failed, please check your balance or try again later."
     },
     "text": {
       "en": "Text",
-      "zh": "文本"
+      "ru": "Text"
     },
     "toMailEmpty": {
       "en": "Recipient address is empty",
-      "zh": "收件人地址不能为空"
+      "ru": "Recipient address is empty"
     },
     "toName": {
       "en": "Recipient Name and Address, leave Name blank to use email address",
-      "zh": "收件人名称和地址，名称不填写则使用邮箱地址"
+      "ru": "Recipient Name and Address, leave Name blank to use email address"
     },
     "tooLarge": {
       "en": "Too large file, please upload file less than 1MB.",
-      "zh": "文件过大, 请上传小于1MB的文件。"
+      "ru": "Too large file, please upload file less than 1MB."
     }
   },
   "views.index.SimpleIndex": {
     "accountSettings": {
       "en": "Account Settings",
-      "zh": "账户设置"
+      "ru": "Account Settings"
     },
     "addressCopied": {
       "en": "Address copied successfully",
-      "zh": "地址复制成功"
+      "ru": "Address copied successfully"
     },
     "addressCredential": {
       "en": "Mail Address Credential",
-      "zh": "邮箱地址凭证"
+      "ru": "Mail Address Credential"
     },
     "addressCredentialTip": {
       "en": "Please copy the Mail Address Credential and you can use it to login",
-      "zh": "请复制邮箱地址凭证，你可以使用它登录你的邮箱。"
+      "ru": "Please copy the Mail Address Credential and you can use it to login"
     },
     "copyAddress": {
       "en": "Copy",
-      "zh": "复制"
+      "ru": "Copy"
     },
     "deleteSuccess": {
       "en": "Mail deleted successfully",
-      "zh": "邮件删除成功"
+      "ru": "Mail deleted successfully"
     },
     "exitSimpleIndex": {
       "en": "Exit Simple",
-      "zh": "退出极简"
+      "ru": "Exit Simple"
     },
     "mailCount": {
       "en": "{current} / {total} emails",
-      "zh": "{current} / {total} 封邮件"
+      "ru": "{current} / {total} emails"
     },
     "nextPage": {
       "en": "Next",
-      "zh": "下一页"
+      "ru": "Next"
     },
     "noMails": {
       "en": "No mails found",
-      "zh": "暂无邮件"
+      "ru": "No mails found"
     },
     "prevPage": {
       "en": "Previous",
-      "zh": "上一页"
+      "ru": "Previous"
     },
     "refreshAfter": {
       "en": "Refresh After {msg} Seconds",
-      "zh": "{msg}秒后刷新"
+      "ru": "Refresh After {msg} Seconds"
     },
     "refreshMails": {
       "en": "Refresh",
-      "zh": "刷新"
+      "ru": "Refresh"
     },
     "refreshSuccess": {
       "en": "Mails refreshed successfully",
-      "zh": "邮件刷新成功"
+      "ru": "Mails refreshed successfully"
     }
   },
   "views.index.TelegramAddress": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "address": {
       "en": "Address",
-      "zh": "地址"
+      "ru": "Address"
     },
     "bind": {
       "en": "Bind",
-      "zh": "绑定"
+      "ru": "Bind"
     },
     "bindAddressSuccess": {
       "en": "Bind Address Success",
-      "zh": "绑定地址成功"
+      "ru": "Bind Address Success"
     },
     "changeMailAddress": {
       "en": "Change Mail Address",
-      "zh": "切换邮箱地址"
+      "ru": "Change Mail Address"
     },
     "success": {
       "en": "success",
-      "zh": "成功"
+      "ru": "success"
     },
     "unbindMailAddress": {
       "en": "Unbind Mail Address",
-      "zh": "解绑邮箱地址"
+      "ru": "Unbind Mail Address"
     }
   },
   "views.index.AddressBar": {
     "addressCredential": {
       "en": "Mail Address Credential",
-      "zh": "邮箱地址凭证"
+      "ru": "Mail Address Credential"
     },
     "addressCredentialTip": {
       "en": "Please copy the Mail Address Credential and you can use it to login to your email account.",
-      "zh": "请复制邮箱地址凭证，你可以使用它登录你的邮箱。"
+      "ru": "Please copy the Mail Address Credential and you can use it to login to your email account."
     },
     "addressManage": {
       "en": "Manage",
-      "zh": "地址管理"
+      "ru": "Manage"
     },
     "addressPassword": {
       "en": "Address Password",
-      "zh": "地址密码"
+      "ru": "Address Password"
     },
     "fetchAddressError": {
       "en": "Mail address credential is invalid or account not exist, it may be network connection issue, please try again later.",
-      "zh": "邮箱地址凭证无效或邮箱地址不存在，也可能是网络连接异常，请稍后再尝试。"
+      "ru": "Mail address credential is invalid or account not exist, it may be network connection issue, please try again later."
     },
     "linkWithAddressCredential": {
       "en": "Open to auto login email link",
-      "zh": "打开即可自动登录邮箱的链接"
+      "ru": "Open to auto login email link"
     },
     "ok": {
       "en": "OK",
-      "zh": "确定"
+      "ru": "OK"
     },
     "userLogin": {
       "en": "User Login",
-      "zh": "用户登录"
+      "ru": "User Login"
     }
   },
   "views.admin.SendBox": {
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     },
     "queryTip": {
       "en": "Please input address to query, leave blank to query all",
-      "zh": "请输入地址查询, 留空则查询所有"
+      "ru": "Please input address to query, leave blank to query all"
     }
   },
   "views.admin.AiExtractSettings": {
     "allowList": {
       "en": "Address Allowlist (Enter address and press Enter, wildcards supported)",
-      "zh": "地址白名单 (请输入地址并回车，支持通配符)"
+      "ru": "Address Allowlist (Enter address and press Enter, wildcards supported)"
     },
     "allowListTip": {
       "en": "Wildcard * matches any characters, e.g. *{'@'}example.com matches all addresses under example.com domain",
-      "zh": "通配符 * 可匹配任意字符，如 *{'@'}example.com 可匹配 example.com 域名下的所有地址"
+      "ru": "Wildcard * matches any characters, e.g. *{'@'}example.com matches all addresses under example.com domain"
     },
     "disabledTip": {
       "en": "When disabled, AI extraction will process all email addresses",
-      "zh": "未启用时，所有邮箱地址都可使用 AI 提取功能"
+      "ru": "When disabled, AI extraction will process all email addresses"
     },
     "enableAllowList": {
       "en": "Enable Address Allowlist",
-      "zh": "启用地址白名单"
+      "ru": "Enable Address Allowlist"
     },
     "enableAllowListTip": {
       "en": "When enabled, AI extraction will only process emails sent to addresses in the allowlist",
-      "zh": "启用后，AI 提取功能仅对白名单中的邮箱地址生效"
+      "ru": "When enabled, AI extraction will only process emails sent to addresses in the allowlist"
     },
     "manualInputPrompt": {
       "en": "Type and press Enter to add",
-      "zh": "输入后按回车键添加"
+      "ru": "Type and press Enter to add"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "title": {
       "en": "AI Email Extraction Settings",
-      "zh": "AI 邮件提取设置"
+      "ru": "AI Email Extraction Settings"
     }
   },
   "views.admin.SendMail": {
     "content": {
       "en": "Content",
-      "zh": "内容"
+      "ru": "Content"
     },
     "contentEmpty": {
       "en": "Content is empty",
-      "zh": "内容不能为空"
+      "ru": "Content is empty"
     },
     "edit": {
       "en": "Edit",
-      "zh": "编辑"
+      "ru": "Edit"
     },
     "fromMailEmpty": {
       "en": "Sender address is empty",
-      "zh": "发件人地址不能为空"
+      "ru": "Sender address is empty"
     },
     "fromName": {
       "en": "Your Name and Address, leave Name blank to use email address",
-      "zh": "你的名称和地址，名称不填写则使用邮箱地址"
+      "ru": "Your Name and Address, leave Name blank to use email address"
     },
     "html": {
       "en": "HTML",
-      "zh": "HTML"
+      "ru": "HTML"
     },
     "options": {
       "en": "Options",
-      "zh": "选项"
+      "ru": "Options"
     },
     "preview": {
       "en": "Preview",
-      "zh": "预览"
+      "ru": "Preview"
     },
     "rich text": {
       "en": "Rich Text",
-      "zh": "富文本"
+      "ru": "Rich Text"
     },
     "send": {
       "en": "Send",
-      "zh": "发送"
+      "ru": "Send"
     },
     "subject": {
       "en": "Subject",
-      "zh": "主题"
+      "ru": "Subject"
     },
     "subjectEmpty": {
       "en": "Subject is empty",
-      "zh": "主题不能为空"
+      "ru": "Subject is empty"
     },
     "successSend": {
       "en": "Please check your sendbox. If failed, please try again later.",
-      "zh": "请查看您的发件箱, 如果失败, 请检查稍后重试。"
+      "ru": "Please check your sendbox. If failed, please try again later."
     },
     "text": {
       "en": "Text",
-      "zh": "文本"
+      "ru": "Text"
     },
     "toMailEmpty": {
       "en": "Recipient address is empty",
-      "zh": "收件人地址不能为空"
+      "ru": "Recipient address is empty"
     },
     "toName": {
       "en": "Recipient Name and Address, leave Name blank to use email address",
-      "zh": "收件人名称和地址，名称不填写则使用邮箱地址"
+      "ru": "Recipient Name and Address, leave Name blank to use email address"
     },
     "tooLarge": {
       "en": "Too large file, please upload file less than 1MB.",
-      "zh": "文件过大, 请上传小于1MB的文件。"
+      "ru": "Too large file, please upload file less than 1MB."
     }
   },
   "views.admin.Account": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "addressCredential": {
       "en": "Mail Address Credential",
-      "zh": "邮箱地址凭证"
+      "ru": "Mail Address Credential"
     },
     "addressCredentialTip": {
       "en": "Please copy the Mail Address Credential and you can use it to login to your email account.",
-      "zh": "请复制邮箱地址凭证，你可以使用它登录你的邮箱。"
+      "ru": "Please copy the Mail Address Credential and you can use it to login to your email account."
     },
     "addressQueryTip": {
       "en": "Leave blank to query all addresses",
-      "zh": "留空查询所有地址"
+      "ru": "Leave blank to query all addresses"
     },
     "clearInbox": {
       "en": "Clear Inbox",
-      "zh": "清空收件箱"
+      "ru": "Clear Inbox"
     },
     "clearInboxTip": {
       "en": "Are you sure to clear inbox for this email?",
-      "zh": "确定要清空这个邮箱的收件箱吗？"
+      "ru": "Are you sure to clear inbox for this email?"
     },
     "clearSentItems": {
       "en": "Clear Sent Items",
-      "zh": "清空发件箱"
+      "ru": "Clear Sent Items"
     },
     "clearSentItemsTip": {
       "en": "Are you sure to clear sent items for this email?",
-      "zh": "确定要清空这个邮箱的发件箱吗？"
+      "ru": "Are you sure to clear sent items for this email?"
     },
     "created_at": {
       "en": "Created At",
-      "zh": "创建时间"
+      "ru": "Created At"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteAccount": {
       "en": "Delete Account",
-      "zh": "删除邮箱"
+      "ru": "Delete Account"
     },
     "deleteTip": {
       "en": "Are you sure to delete this email?",
-      "zh": "确定要删除这个邮箱吗？"
+      "ru": "Are you sure to delete this email?"
     },
     "itemCount": {
       "en": "itemCount",
-      "zh": "总数"
+      "ru": "itemCount"
     },
     "mail_count": {
       "en": "Mail Count",
-      "zh": "邮件数量"
+      "ru": "Mail Count"
     },
     "multiClearInbox": {
       "en": "Multi Clear Inbox",
-      "zh": "批量清空收件箱"
+      "ru": "Multi Clear Inbox"
     },
     "multiClearInboxTip": {
       "en": "Are you sure to clear inbox for selected addresses?",
-      "zh": "确定要清空选中邮箱的收件箱吗？"
+      "ru": "Are you sure to clear inbox for selected addresses?"
     },
     "multiClearSentItems": {
       "en": "Multi Clear Sent Items",
-      "zh": "批量清空发件箱"
+      "ru": "Multi Clear Sent Items"
     },
     "multiClearSentItemsTip": {
       "en": "Are you sure to clear sent items for selected addresses?",
-      "zh": "确定要清空选中邮箱的发件箱吗？"
+      "ru": "Are you sure to clear sent items for selected addresses?"
     },
     "multiDelete": {
       "en": "Multi Delete",
-      "zh": "批量删除"
+      "ru": "Multi Delete"
     },
     "multiDeleteTip": {
       "en": "Are you sure to delete selected addresses?",
-      "zh": "确定要删除选中的邮箱吗？"
+      "ru": "Are you sure to delete selected addresses?"
     },
     "name": {
       "en": "Name",
-      "zh": "名称"
+      "ru": "Name"
     },
     "newPassword": {
       "en": "New Password",
-      "zh": "新密码"
+      "ru": "New Password"
     },
     "passwordResetSuccess": {
       "en": "Password reset successfully",
-      "zh": "密码重置成功"
+      "ru": "Password reset successfully"
     },
     "pleaseSelectAddress": {
       "en": "Please select address",
-      "zh": "请选择地址"
+      "ru": "Please select address"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     },
     "resetPassword": {
       "en": "Reset Password",
-      "zh": "重置密码"
+      "ru": "Reset Password"
     },
     "selectAll": {
       "en": "Select All of This Page",
-      "zh": "全选本页"
+      "ru": "Select All of This Page"
     },
     "selectedItems": {
       "en": "Selected",
-      "zh": "已选择"
+      "ru": "Selected"
     },
     "send_count": {
       "en": "Send Count",
-      "zh": "发送数量"
+      "ru": "Send Count"
     },
     "showCredential": {
       "en": "Show Mail Address Credential",
-      "zh": "查看邮箱地址凭证"
+      "ru": "Show Mail Address Credential"
     },
     "source_meta": {
       "en": "Source",
-      "zh": "来源"
+      "ru": "Source"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "unselectAll": {
       "en": "Unselect All",
-      "zh": "取消全选"
+      "ru": "Unselect All"
     },
     "updated_at": {
       "en": "Update At",
-      "zh": "更新时间"
+      "ru": "Update At"
     },
     "viewMails": {
       "en": "View Mails",
-      "zh": "查看邮件"
+      "ru": "View Mails"
     },
     "viewSendBox": {
       "en": "View SendBox",
-      "zh": "查看发件箱"
+      "ru": "View SendBox"
     }
   },
   "views.admin.UserOauth2Settings": {
     "addOauth2": {
       "en": "Add Oauth2",
-      "zh": "添加 Oauth2"
+      "ru": "Add Oauth2"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "enable": {
       "en": "Enable",
-      "zh": "启用"
+      "ru": "Enable"
     },
     "enableEmailFormat": {
       "en": "Enable Email Format",
-      "zh": "启用邮箱格式转换"
+      "ru": "Enable Email Format"
     },
     "enableMailAllowList": {
       "en": "Enable Mail Address Allow List(Manually enterable)",
-      "zh": "启用邮件地址白名单(可手动输入, 回车增加)"
+      "ru": "Enable Mail Address Allow List(Manually enterable)"
     },
     "icon": {
       "en": "Icon (SVG, please ensure trusted source)",
-      "zh": "图标 (SVG, 请确保来源可信)"
+      "ru": "Icon (SVG, please ensure trusted source)"
     },
     "iconPreview": {
       "en": "Preview",
-      "zh": "预览"
+      "ru": "Preview"
     },
     "mailAllowList": {
       "en": "Mail Address Allow List",
-      "zh": "邮件地址白名单"
+      "ru": "Mail Address Allow List"
     },
     "manualInputPrompt": {
       "en": "Type and press Enter to add",
-      "zh": "输入后按回车键添加"
+      "ru": "Type and press Enter to add"
     },
     "name": {
       "en": "Name",
-      "zh": "名称"
+      "ru": "Name"
     },
     "oauth2Type": {
       "en": "Oauth2 Type",
-      "zh": "Oauth2 类型"
+      "ru": "Oauth2 Type"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Save Success",
-      "zh": "保存成功"
+      "ru": "Save Success"
     },
     "tip": {
       "en": "Third-party login will automatically use the user's email to register an account (the same email will be regarded as the same account), this account is the same as the registered account, and you can also set the password through the forget password",
-      "zh": "第三方登录会自动使用用户邮箱注册账号(邮箱相同将视为同一账号), 此账号和注册的账号相同, 也可以通过忘记密码设置密码"
+      "ru": "Third-party login will automatically use the user's email to register an account (the same email will be regarded as the same account), this account is the same as the registered account, and you can also set the password through the forget password"
     },
     "userEmailFormat": {
       "en": "Email Regex Pattern",
-      "zh": "邮箱正则表达式"
+      "ru": "Email Regex Pattern"
     },
     "userEmailFormatTip": {
       "en": "Use regex to transform email. Example: ^(.+)@old\\.com$ with $1@new.com",
-      "zh": "使用正则转换邮箱。示例: ^(.+)@old\\.com$ 配合 $1@new.com"
+      "ru": "Use regex to transform email. Example: ^(.+)@old\\.com$ with $1@new.com"
     },
     "userEmailReplace": {
       "en": "Replace Template",
-      "zh": "替换模板"
+      "ru": "Replace Template"
     }
   },
   "views.admin.Statistics": {
     "activeAddressCount30days": {
       "en": "30 days Active Address Count",
-      "zh": "30天活跃邮箱地址总数"
+      "ru": "30 days Active Address Count"
     },
     "activeAddressCount7days": {
       "en": "7 days Active Address Count",
-      "zh": "7天活跃邮箱地址总数"
+      "ru": "7 days Active Address Count"
     },
     "addressCount": {
       "en": "Address Count",
-      "zh": "邮箱地址总数"
+      "ru": "Address Count"
     },
     "mailCount": {
       "en": "Mail Count",
-      "zh": "邮件总数"
+      "ru": "Mail Count"
     },
     "sendMailCount": {
       "en": "Send Mail Count",
-      "zh": "发送邮件总数"
+      "ru": "Send Mail Count"
     },
     "userCount": {
       "en": "User Count",
-      "zh": "用户总数"
+      "ru": "User Count"
     }
   },
   "views.admin.SenderAccess": {
     "action": {
       "en": "Action",
-      "zh": "操作"
+      "ru": "Action"
     },
     "address": {
       "en": "Address",
-      "zh": "地址"
+      "ru": "Address"
     },
     "balance": {
       "en": "Balance",
-      "zh": "余额"
+      "ru": "Balance"
     },
     "created_at": {
       "en": "Created At",
-      "zh": "创建时间"
+      "ru": "Created At"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteTip": {
       "en": "Are you sure to delete this?",
-      "zh": "确定删除吗？"
+      "ru": "Are you sure to delete this?"
     },
     "disable": {
       "en": "Disable",
-      "zh": "禁用"
+      "ru": "Disable"
     },
     "enable": {
       "en": "Enable",
-      "zh": "启用"
+      "ru": "Enable"
     },
     "is_enabled": {
       "en": "Is Enabled",
-      "zh": "是否启用"
+      "ru": "Is Enabled"
     },
     "itemCount": {
       "en": "itemCount",
-      "zh": "总数"
+      "ru": "itemCount"
     },
     "modalTip": {
       "en": "Please input the sender balance",
-      "zh": "请输入发件额度"
+      "ru": "Please input the sender balance"
     },
     "modify": {
       "en": "Modify",
-      "zh": "修改"
+      "ru": "Modify"
     },
     "ok": {
       "en": "OK",
-      "zh": "确定"
+      "ru": "OK"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     }
   },
   "views.index.LocalAddress": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "address": {
       "en": "Address",
-      "zh": "地址"
+      "ru": "Address"
     },
     "bindAddressSuccess": {
       "en": "Bind Address Success",
-      "zh": "绑定地址成功"
+      "ru": "Bind Address Success"
     },
     "changeMailAddress": {
       "en": "Change Mail Address",
-      "zh": "切换邮箱地址"
+      "ru": "Change Mail Address"
     },
     "create_or_bind": {
       "en": "Create or Bind",
-      "zh": "创建或绑定"
+      "ru": "Create or Bind"
     },
     "success": {
       "en": "success",
-      "zh": "成功"
+      "ru": "success"
     },
     "tip": {
       "en": "These addresses are stored in your browser, maybe loss if you clear the browser cache.",
-      "zh": "这些地址存储在您的浏览器中，如果您清除浏览器缓存，可能会丢失。"
+      "ru": "These addresses are stored in your browser, maybe loss if you clear the browser cache."
     },
     "unbindMailAddress": {
       "en": "Unbind Mail Address credential",
-      "zh": "解绑邮箱地址"
+      "ru": "Unbind Mail Address credential"
     }
   },
   "views.admin.DatabaseManager": {
     "code_db_version": {
       "en": "Code Needed DB Version",
-      "zh": "需要的数据库版本"
+      "ru": "Code Needed DB Version"
     },
     "current_db_version": {
       "en": "Current DB Version",
-      "zh": "当前数据库版本"
+      "ru": "Current DB Version"
     },
     "init": {
       "en": "Initialize Database",
-      "zh": "初始化数据库"
+      "ru": "Initialize Database"
     },
     "initializationSuccess": {
       "en": "Database initialized successfully",
-      "zh": "数据库初始化成功"
+      "ru": "Database initialized successfully"
     },
     "migration": {
       "en": "Migrate Database",
-      "zh": "升级数据库 Schema"
+      "ru": "Migrate Database"
     },
     "migrationSuccess": {
       "en": "Database migrated successfully",
-      "zh": "数据库升级成功"
+      "ru": "Database migrated successfully"
     },
     "need_initialization_tip": {
       "en": "Database initialization is required. Please initialize the database.",
-      "zh": "需要初始化数据库，请初始化数据库"
+      "ru": "Database initialization is required. Please initialize the database."
     },
     "need_migration_tip": {
       "en": "Database migration is required. Please migrate the database.",
-      "zh": "需要迁移数据库，请迁移数据库"
+      "ru": "Database migration is required. Please migrate the database."
     }
   },
   "views.admin.IpBlacklistSettings": {
     "asn_blacklist": {
       "en": "ASN Organization Blacklist",
-      "zh": "ASN 组织（运营商）黑名单"
+      "ru": "ASN Organization Blacklist"
     },
     "asn_blacklist_placeholder": {
       "en": "Enter ASN organization (e.g., Google, Amazon)",
-      "zh": "输入 ASN 组织名称（例如：Google, Amazon）"
+      "ru": "Enter ASN organization (e.g., Google, Amazon)"
     },
     "daily_request_limit": {
       "en": "Daily Request Limit",
-      "zh": "每日请求次数上限"
+      "ru": "Daily Request Limit"
     },
     "daily_request_limit_placeholder": {
       "en": "Enter limit (e.g., 1000)",
-      "zh": "输入限制次数（例如：1000）"
+      "ru": "Enter limit (e.g., 1000)"
     },
     "enable_daily_limit": {
       "en": "Enable Daily Request Limit",
-      "zh": "启用每日请求限流"
+      "ru": "Enable Daily Request Limit"
     },
     "enable_daily_limit_tip": {
       "en": "Limit the number of API requests per IP address per day",
-      "zh": "限制每个 IP 地址每天的 API 请求次数"
+      "ru": "Limit the number of API requests per IP address per day"
     },
     "enable_ip_blacklist": {
       "en": "Enable IP Blacklist",
-      "zh": "启用 IP 黑名单"
+      "ru": "Enable IP Blacklist"
     },
     "enable_ip_whitelist": {
       "en": "Enable IP Whitelist (Strict)",
-      "zh": "启用 IP 白名单（严格模式）"
+      "ru": "Enable IP Whitelist (Strict)"
     },
     "enable_tip": {
       "en": "Block IPs matching blacklist patterns from accessing rate-limited APIs",
-      "zh": "阻止匹配黑名单的 IP 访问限流 API"
+      "ru": "Block IPs matching blacklist patterns from accessing rate-limited APIs"
     },
     "enable_whitelist_tip": {
       "en": "Strict mode: ONLY IPs matching the whitelist can access rate-limited APIs. All other IPs will be denied.",
-      "zh": "严格模式：仅允许匹配白名单的 IP 访问限流 API，其他所有 IP 将被拒绝"
+      "ru": "Strict mode: ONLY IPs matching the whitelist can access rate-limited APIs. All other IPs will be denied."
     },
     "fingerprint_blacklist": {
       "en": "Browser Fingerprint Blacklist",
-      "zh": "浏览器指纹黑名单"
+      "ru": "Browser Fingerprint Blacklist"
     },
     "fingerprint_blacklist_placeholder": {
       "en": "Enter fingerprint ID (e.g., a1b2c3d4e5f6g7h8)",
-      "zh": "输入指纹 ID（例如：a1b2c3d4e5f6g7h8）"
+      "ru": "Enter fingerprint ID (e.g., a1b2c3d4e5f6g7h8)"
     },
     "ip_blacklist": {
       "en": "IP Blacklist Patterns",
-      "zh": "IP 黑名单匹配模式"
+      "ru": "IP Blacklist Patterns"
     },
     "ip_blacklist_placeholder": {
       "en": "Enter pattern (e.g., 192.168.1 or ^10\\.0\\.0\\.5$)",
-      "zh": "输入匹配模式（例如：192.168.1 或 ^10\\.0\\.0\\.5$）"
+      "ru": "Enter pattern (e.g., 192.168.1 or ^10\\.0\\.0\\.5$)"
     },
     "ip_whitelist": {
       "en": "IP Whitelist Patterns",
-      "zh": "IP 白名单匹配模式"
+      "ru": "IP Whitelist Patterns"
     },
     "ip_whitelist_placeholder": {
       "en": "Exact IP (e.g., 1.2.3.4) or anchored regex (e.g., ^192\\.168\\.1\\.\\d+$)",
-      "zh": "精确 IP(如 1.2.3.4)或锚定正则(如 ^192\\.168\\.1\\.\\d+$)"
+      "ru": "Exact IP (e.g., 1.2.3.4) or anchored regex (e.g., ^192\\.168\\.1\\.\\d+$)"
     },
     "manualInputPrompt": {
       "en": "Type pattern and press Enter to add",
-      "zh": "输入匹配模式后按回车键添加"
+      "ru": "Type pattern and press Enter to add"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Save Success",
-      "zh": "保存成功"
+      "ru": "Save Success"
     },
     "tip_asn": {
       "en": "ASN Organization: Block by ISP/provider. Case-insensitive text matching or regex.",
-      "zh": "ASN 组织：根据运营商/ISP 拉黑。支持不区分大小写的文本匹配或正则表达式。"
+      "ru": "ASN Organization: Block by ISP/provider. Case-insensitive text matching or regex."
     },
     "tip_daily_limit": {
       "en": "Daily Limit: Restrict the maximum number of requests per IP address per day (1-1000000).",
-      "zh": "每日限流：限制单个 IP 地址每天最多请求次数（1-1000000）。"
+      "ru": "Daily Limit: Restrict the maximum number of requests per IP address per day (1-1000000)."
     },
     "tip_fingerprint": {
       "en": "Browser Fingerprint: Block by browser fingerprint. Supports exact matching or regex patterns.",
-      "zh": "浏览器指纹：根据浏览器指纹拉黑。支持完全匹配或正则表达式。"
+      "ru": "Browser Fingerprint: Block by browser fingerprint. Supports exact matching or regex patterns."
     },
     "tip_ip": {
       "en": "IP Blacklist: Supports text matching (e.g., \"192.168.1\") or regex (e.g., \"^10\\.0\\.0\\.5$\").",
-      "zh": "IP 黑名单：支持文本匹配（如 \"192.168.1\"）或正则表达式（如 \"^10\\.0\\.0\\.5$\"）。"
+      "ru": "IP Blacklist: Supports text matching (e.g., \"192.168.1\") or regex (e.g., \"^10\\.0\\.0\\.5$\")."
     },
     "tip_scope": {
       "en": "Applies to: Create Address, Send Mail, External Send Mail API, User Registration, Verify Code",
-      "zh": "作用范围：创建邮箱地址、发送邮件、外部发送邮件 API、用户注册、验证码验证"
+      "ru": "Applies to: Create Address, Send Mail, External Send Mail API, User Registration, Verify Code"
     },
     "tip_whitelist": {
       "en": "IP Whitelist: Strict allowlist — plain entries must be EXACT IP matches (no substring). Use anchored regex (^...$) for ranges. Whitelisted IPs skip blacklist checks.",
-      "zh": "IP 白名单: 严格放行名单——纯文本必须是精确 IP(不支持子串匹配), 批量放行请用锚定正则 ^...$. 命中白名单的 IP 将跳过黑名单检查."
+      "ru": "IP Whitelist: Strict allowlist — plain entries must be EXACT IP matches (no substring). Use anchored regex (^...$) for ranges. Whitelisted IPs skip blacklist checks."
     },
     "title": {
       "en": "IP Blacklist Settings",
-      "zh": "IP 黑名单设置"
+      "ru": "IP Blacklist Settings"
     },
     "whitelist_empty_warning": {
       "en": "IP whitelist is enabled but the list is empty. This is ignored by the server to prevent lockout. Please add at least one entry before enabling.",
-      "zh": "IP 白名单已启用但列表为空，服务端将忽略该开关以防止锁死。请先添加至少一条白名单条目再启用。"
+      "ru": "IP whitelist is enabled but the list is empty. This is ignored by the server to prevent lockout. Please add at least one entry before enabling."
     }
   },
   "views.admin.UserAddressManagement": {
     "mail_count": {
       "en": "Mail Count",
-      "zh": "邮件数量"
+      "ru": "Mail Count"
     },
     "name": {
       "en": "Name",
-      "zh": "名称"
+      "ru": "Name"
     },
     "send_count": {
       "en": "Send Count",
-      "zh": "发送数量"
+      "ru": "Send Count"
     },
     "success": {
       "en": "success",
-      "zh": "成功"
+      "ru": "success"
     }
   },
   "views.admin.UserManagement": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "address_count": {
       "en": "Address Count",
-      "zh": "地址数量"
+      "ru": "Address Count"
     },
     "changeRole": {
       "en": "Change Role",
-      "zh": "更改角色"
+      "ru": "Change Role"
     },
     "createUser": {
       "en": "Create User",
-      "zh": "创建用户"
+      "ru": "Create User"
     },
     "created_at": {
       "en": "Created At",
-      "zh": "创建时间"
+      "ru": "Created At"
     },
     "delete": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "deleteUser": {
       "en": "Delete User",
-      "zh": "删除用户"
+      "ru": "Delete User"
     },
     "deleteUserTip": {
       "en": "Are you sure you want to delete this user?",
-      "zh": "确定要删除此用户吗？"
+      "ru": "Are you sure you want to delete this user?"
     },
     "domains": {
       "en": "Domains",
-      "zh": "域名"
+      "ru": "Domains"
     },
     "email": {
       "en": "Email",
-      "zh": "邮箱"
+      "ru": "Email"
     },
     "itemCount": {
       "en": "itemCount",
-      "zh": "总数"
+      "ru": "itemCount"
     },
     "password": {
       "en": "Password",
-      "zh": "密码"
+      "ru": "Password"
     },
     "pleaseInput": {
       "en": "Please input complete information",
-      "zh": "请输入完整信息"
+      "ru": "Please input complete information"
     },
     "prefix": {
       "en": "Prefix",
-      "zh": "前缀"
+      "ru": "Prefix"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     },
     "resetPassword": {
       "en": "Reset Password",
-      "zh": "重置密码"
+      "ru": "Reset Password"
     },
     "role": {
       "en": "Role",
-      "zh": "角色"
+      "ru": "Role"
     },
     "roleDonotExist": {
       "en": "Current Role does not exist",
-      "zh": "当前角色不存在"
+      "ru": "Current Role does not exist"
     },
     "success": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "userAddressManagement": {
       "en": "Address Management",
-      "zh": "地址管理"
+      "ru": "Address Management"
     },
     "user_email": {
       "en": "User Email",
-      "zh": "用户邮箱"
+      "ru": "User Email"
     }
   },
   "views.admin.Telegram": {
     "enable": {
       "en": "Enable",
-      "zh": "启用"
+      "ru": "Enable"
     },
     "enableGlobalMailPush": {
       "en": "Enable Global Mail Push(Manually input telegram Chat ID)",
-      "zh": "启用全局邮件推送(手动输入邮箱管理员的 telegram Chat ID, 回车增加)"
+      "ru": "Enable Global Mail Push(Manually input telegram Chat ID)"
     },
     "enableTelegramAllowList": {
       "en": "Enable Telegram Allow List(Manually input Chat ID)",
-      "zh": "启用 Telegram 白名单(手动输入 Chat ID, 回车增加)"
+      "ru": "Enable Telegram Allow List(Manually input Chat ID)"
     },
     "globalMailPushList": {
       "en": "Global Mail Push Chat ID List",
-      "zh": "全局邮件推送 Chat ID 列表"
+      "ru": "Global Mail Push Chat ID List"
     },
     "globalMailPushListTip": {
       "en": "Support chat_id of private chat/group/channel. You can send a message to your bot, then visit this link to see chat_id, https://api.telegram.org/bot<Replace with your BOT TOKEN>/getUpdates",
-      "zh": "支持对话/群组/频道的 Chat ID, 您可以发送一条消息给您的机器人，然后访问此链接来查看 chat_id, https://api.telegram.org/bot<这里替换成您的 BOT TOKEN>/getUpdates"
+      "ru": "Support chat_id of private chat/group/channel. You can send a message to your bot, then visit this link to see chat_id, https://api.telegram.org/bot<Replace with your BOT TOKEN>/getUpdates"
     },
     "init": {
       "en": "Init",
-      "zh": "初始化"
+      "ru": "Init"
     },
     "manualInputPrompt": {
       "en": "Type and press Enter to add",
-      "zh": "输入后按回车键添加"
+      "ru": "Type and press Enter to add"
     },
     "miniAppUrl": {
       "en": "Telegram Mini App URL",
-      "zh": "电报小程序 URL(请输入你部署的电报小程序网页地址)"
+      "ru": "Telegram Mini App URL"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "status": {
       "en": "Check Status",
-      "zh": "查看状态"
+      "ru": "Check Status"
     },
     "successTip": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "telegramAllowList": {
       "en": "Telegram Allow List(Manually input telegram Chat ID)",
-      "zh": "Telegram 白名单(手动输入 Chat ID, 回车增加)"
+      "ru": "Telegram Allow List(Manually input telegram Chat ID)"
     }
   },
   "views.admin.CreateAccount": {
     "address": {
       "en": "Address",
-      "zh": "地址"
+      "ru": "Address"
     },
     "addressCredential": {
       "en": "Mail Address Credential",
-      "zh": "邮箱地址凭证"
+      "ru": "Mail Address Credential"
     },
     "addressCredentialTip": {
       "en": "Please copy the Mail Address Credential and you can use it to login to your email account.",
-      "zh": "请复制邮箱地址凭证，你可以使用它登录你的邮箱。"
+      "ru": "Please copy the Mail Address Credential and you can use it to login to your email account."
     },
     "addressPassword": {
       "en": "Address Password",
-      "zh": "地址密码"
+      "ru": "Address Password"
     },
     "creatNewEmail": {
       "en": "Create New Email",
-      "zh": "创建新邮箱"
+      "ru": "Create New Email"
     },
     "enablePrefix": {
       "en": "If enable Prefix",
-      "zh": "是否启用前缀"
+      "ru": "If enable Prefix"
     },
     "enableRandomSubdomain": {
       "en": "Use Random Subdomain",
-      "zh": "启用随机子域名"
+      "ru": "Use Random Subdomain"
     },
     "fillInAllFields": {
       "en": "Please fill in all fields",
-      "zh": "请填写完整信息"
+      "ru": "Please fill in all fields"
     },
     "linkWithAddressCredential": {
       "en": "Open to auto login email link",
-      "zh": "打开即可自动登录邮箱的链接"
+      "ru": "Open to auto login email link"
     },
     "randomSubdomainTip": {
       "en": "When enabled, the created address will use a random subdomain. Subdomain addresses are recommended for receiving only.",
-      "zh": "启用后，创建出来的地址会自动挂在随机子域名下。子域名地址更建议仅用于收件。"
+      "ru": "When enabled, the created address will use a random subdomain. Subdomain addresses are recommended for receiving only."
     },
     "successTip": {
       "en": "Success Created",
-      "zh": "创建成功"
+      "ru": "Success Created"
     }
   },
   "views.admin.UserSettings": {
     "emailCheckRegex": {
       "en": "Email Check Regex (e.g. ^[^.]+{'@'}.+$ to disallow dots before {'@'})",
-      "zh": "邮箱正则校验 (例如 ^[^.]+{'@'}.+$ 禁止{'@'}前面有.)"
+      "ru": "Email Check Regex (e.g. ^[^.]+{'@'}.+$ to disallow dots before {'@'})"
     },
     "enable": {
       "en": "Enable",
-      "zh": "启用"
+      "ru": "Enable"
     },
     "enableEmailCheckRegex": {
       "en": "Enable Email Check Regex",
-      "zh": "启用邮箱正则校验"
+      "ru": "Enable Email Check Regex"
     },
     "enableMailAllowList": {
       "en": "Enable Mail Address Allow List(Manually enterable)",
-      "zh": "启用邮件地址白名单(可手动输入, 回车增加)"
+      "ru": "Enable Mail Address Allow List(Manually enterable)"
     },
     "enableMailVerify": {
       "en": "Enable Mail Verify (Send address must be an address in the system with a balance and can send mail normally)",
-      "zh": "启用邮件验证(发送地址必须是系统中能有余额且能正常发送邮件的地址)"
+      "ru": "Enable Mail Verify (Send address must be an address in the system with a balance and can send mail normally)"
     },
     "enableUserRegister": {
       "en": "Allow User Register",
-      "zh": "允许用户注册"
+      "ru": "Allow User Register"
     },
     "mailAllowList": {
       "en": "Mail Address Allow List",
-      "zh": "邮件地址白名单"
+      "ru": "Mail Address Allow List"
     },
     "manualInputPrompt": {
       "en": "Type and press Enter to add",
-      "zh": "输入后按回车键添加"
+      "ru": "Type and press Enter to add"
     },
     "maxAddressCount": {
       "en": "Maximum number of email addresses that can be binded (0 = Unlimited)",
-      "zh": "可绑定最大邮箱地址数量（0 为不限制）"
+      "ru": "Maximum number of email addresses that can be binded (0 = Unlimited)"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Save Success",
-      "zh": "保存成功"
+      "ru": "Save Success"
     },
     "verifyMailSender": {
       "en": "Verify Mail Sender",
-      "zh": "验证邮件发送地址"
+      "ru": "Verify Mail Sender"
     }
   },
   "views.admin.RoleAddressConfig": {
     "maxAddressCount": {
       "en": "Max Address Count (0 = Unlimited)",
-      "zh": "最大地址数量（0 为不限制）"
+      "ru": "Max Address Count (0 = Unlimited)"
     },
     "noRolesAvailable": {
       "en": "No roles available in system config",
-      "zh": "系统配置中没有可用的角色"
+      "ru": "No roles available in system config"
     },
     "notConfigured": {
       "en": "Not Configured (Use Global Settings)",
-      "zh": "未配置（使用全局设置）"
+      "ru": "Not Configured (Use Global Settings)"
     },
     "role": {
       "en": "Role",
-      "zh": "角色"
+      "ru": "Role"
     },
     "roleConfigDesc": {
       "en": "Configure maximum address count for each user role. Role-based limits take priority over global settings. Set 0 for unlimited.",
-      "zh": "为每个用户角色配置最大地址数量。角色配置优先于全局设置。设置为 0 表示不限制。"
+      "ru": "Configure maximum address count for each user role. Role-based limits take priority over global settings. Set 0 for unlimited."
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     }
   },
   "views.common.Appearance": {
     "autoRefreshInterval": {
       "en": "Auto Refresh Interval(Sec)",
-      "zh": "自动刷新间隔(秒)"
+      "ru": "Auto Refresh Interval(Sec)"
     },
     "bottom": {
       "en": "bottom",
-      "zh": "底部"
+      "ru": "bottom"
     },
     "globalTabplacement": {
       "en": "Global Tab Placement",
-      "zh": "全局选项卡位置"
+      "ru": "Global Tab Placement"
     },
     "left": {
       "en": "left",
-      "zh": "左侧"
+      "ru": "left"
     },
     "mailboxSplitSize": {
       "en": "Mailbox Split Size",
-      "zh": "邮箱界面分栏大小"
+      "ru": "Mailbox Split Size"
     },
     "preferShowTextMail": {
       "en": "Display text Mail by default",
-      "zh": "默认以文本显示邮件"
+      "ru": "Display text Mail by default"
     },
     "right": {
       "en": "right",
-      "zh": "右侧"
+      "ru": "right"
     },
     "top": {
       "en": "top",
-      "zh": "顶部"
+      "ru": "top"
     },
     "useIframeShowMail": {
       "en": "Use iframe Show HTML Mail",
-      "zh": "使用iframe显示HTML邮件"
+      "ru": "Use iframe Show HTML Mail"
     },
     "useSideMargin": {
       "en": "Turn on the side margins on the left and right sides of the page",
-      "zh": "开启页面左右两侧侧边距"
+      "ru": "Turn on the side margins on the left and right sides of the page"
     },
     "useSimpleIndex": {
       "en": "Use Simple Index",
-      "zh": "使用极简主页"
+      "ru": "Use Simple Index"
     },
     "useUTCDate": {
       "en": "Use UTC Date",
-      "zh": "使用 UTC 时间"
+      "ru": "Use UTC Date"
     }
   },
   "views.admin.AccountSettings": {
     "actions": {
       "en": "Actions",
-      "zh": "操作"
+      "ru": "Actions"
     },
     "add": {
       "en": "Add",
-      "zh": "添加"
+      "ru": "Add"
     },
     "address_block_list": {
       "en": "Address Block Keywords for Users(Admin can skip)",
-      "zh": "邮件地址屏蔽关键词(管理员可跳过检查)"
+      "ru": "Address Block Keywords for Users(Admin can skip)"
     },
     "address_block_list_placeholder": {
       "en": "Please enter the keywords you want to block",
-      "zh": "请输入您想要屏蔽的关键词"
+      "ru": "Please enter the keywords you want to block"
     },
     "block_receive_unknow_address_email": {
       "en": "Block receive unknow address email",
-      "zh": "禁止接收未知地址邮件"
+      "ru": "Block receive unknow address email"
     },
     "cancel": {
       "en": "Cancel",
-      "zh": "取消"
+      "ru": "Cancel"
     },
     "config": {
       "en": "Config",
-      "zh": "配置"
+      "ru": "Config"
     },
     "create_address_subdomain_match": {
       "en": "Allow Subdomain Suffix Match When Creating Address",
-      "zh": "创建邮箱时允许子域名后缀匹配"
+      "ru": "Allow Subdomain Suffix Match When Creating Address"
     },
     "create_address_subdomain_match_env_locked": {
       "en": "Worker env ENABLE_CREATE_ADDRESS_SUBDOMAIN_MATCH is currently false. The saved admin switch can be modified, but it will not take effect until env is enabled or removed.",
-      "zh": "当前 Worker 环境变量 ENABLE_CREATE_ADDRESS_SUBDOMAIN_MATCH 为 false。后台开关仍可保存，但在 env 打开或移除前不会生效。"
+      "ru": "Worker env ENABLE_CREATE_ADDRESS_SUBDOMAIN_MATCH is currently false. The saved admin switch can be modified, but it will not take effect until env is enabled or removed."
     },
     "create_address_subdomain_match_follow_env": {
       "en": "Follow Environment Variable",
-      "zh": "跟随环境变量"
+      "ru": "Follow Environment Variable"
     },
     "create_address_subdomain_match_follow_env_note": {
       "en": "Choosing \"Follow Environment Variable\" clears the admin override and returns to the unset state. The effective result is still controlled by the Worker env and the precedence rules.",
-      "zh": "选择“跟随环境变量”会清空后台覆盖，恢复为未设置状态；最终是否开启仍由 Worker env 和优先级规则决定。"
+      "ru": "Choosing \"Follow Environment Variable\" clears the admin override and returns to the unset state. The effective result is still controlled by the Worker env and the precedence rules."
     },
     "create_address_subdomain_match_force_disable": {
       "en": "Force Disable",
-      "zh": "强制关闭"
+      "ru": "Force Disable"
     },
     "create_address_subdomain_match_force_enable": {
       "en": "Force Enable",
-      "zh": "强制开启"
+      "ru": "Force Enable"
     },
     "create_address_subdomain_match_note": {
       "en": "This is different from RANDOM_SUBDOMAIN_DOMAINS: this switch allows API callers to specify custom subdomains directly, while random subdomain only auto-generates one during creation.",
-      "zh": "这与 RANDOM_SUBDOMAIN_DOMAINS 不同：这里允许 API 调用方直接指定自定义子域名；随机子域名功能只是在创建时自动补一个随机子域名。"
+      "ru": "This is different from RANDOM_SUBDOMAIN_DOMAINS: this switch allows API callers to specify custom subdomains directly, while random subdomain only auto-generates one during creation."
     },
     "create_address_subdomain_match_tip": {
       "en": "Only affects /api/new_address and /admin/new_address domain validation. Example: when enabled, foo.example.com can match configured base domain example.com.",
-      "zh": "仅影响 /api/new_address 和 /admin/new_address 的域名校验。例如开启后，foo.example.com 可以匹配已配置的基础域名 example.com。"
+      "ru": "Only affects /api/new_address and /admin/new_address domain validation. Example: when enabled, foo.example.com can match configured base domain example.com."
     },
     "delete_rule": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "delete_rule_confirm": {
       "en": "Are you sure you want to delete this rule?",
-      "zh": "确定要删除这条规则吗？"
+      "ru": "Are you sure you want to delete this rule?"
     },
     "delete_success": {
       "en": "Delete Success",
-      "zh": "删除成功"
+      "ru": "Delete Success"
     },
     "domain_list": {
       "en": "Domain List (Optional)",
-      "zh": "域名列表（可选）"
+      "ru": "Domain List (Optional)"
     },
     "email_forwarding_config": {
       "en": "Email Forwarding Configuration",
-      "zh": "邮件转发配置"
+      "ru": "Email Forwarding Configuration"
     },
     "forward_address": {
       "en": "Forward Address",
-      "zh": "转发地址"
+      "ru": "Forward Address"
     },
     "forward_address_required": {
       "en": "Forward address is required",
-      "zh": "转发地址不能为空"
+      "ru": "Forward address is required"
     },
     "forward_placeholder": {
       "en": "forward@example.com",
-      "zh": "forward@example.com"
+      "ru": "forward@example.com"
     },
     "forwarding_rule_warning": {
       "en": "Each rule will run independently. Forward address needs to be a verified address.",
-      "zh": "每条规则独立运行，转发地址需要为已验证的地址。"
+      "ru": "Each rule will run independently. Forward address needs to be a verified address."
     },
     "fromBlockList": {
       "en": "Block Keywords for receive email",
-      "zh": "接收邮件地址屏蔽关键词"
+      "ru": "Block Keywords for receive email"
     },
     "manualInputPrompt": {
       "en": "Type and press Enter to add",
-      "zh": "输入后按回车键添加"
+      "ru": "Type and press Enter to add"
     },
     "match_all": {
       "en": "All",
-      "zh": "全部"
+      "ru": "All"
     },
     "match_any": {
       "en": "Any",
-      "zh": "任一"
+      "ru": "Any"
     },
     "noLimitSendAddressList": {
       "en": "No Balance Limit Send Address List",
-      "zh": "无余额限制发送地址列表"
+      "ru": "No Balance Limit Send Address List"
     },
     "regex_invalid": {
       "en": "Invalid regex pattern",
-      "zh": "无效的正则表达式"
+      "ru": "Invalid regex pattern"
     },
     "regex_too_long": {
       "en": "Regex pattern too long (max 200 characters)",
-      "zh": "正则表达式过长（最大200字符）"
+      "ru": "Regex pattern too long (max 200 characters)"
     },
     "rule_index": {
       "en": "Rule",
-      "zh": "规则"
+      "ru": "Rule"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "select_domain": {
       "en": "Select Domain",
-      "zh": "选择域名"
+      "ru": "Select Domain"
     },
     "send_address_block_list": {
       "en": "Address Block Keywords for send email",
-      "zh": "发送邮件地址屏蔽关键词"
+      "ru": "Address Block Keywords for send email"
     },
     "send_mail_daily_limit": {
       "en": "Daily Limit",
-      "zh": "每日额度"
+      "ru": "Daily Limit"
     },
     "send_mail_daily_limit_invalid": {
       "en": "Daily limit must be an integer greater than or equal to -1",
-      "zh": "每日额度必须是大于等于 -1 的整数"
+      "ru": "Daily limit must be an integer greater than or equal to -1"
     },
     "send_mail_limit": {
       "en": "Send Mail Limit",
-      "zh": "发信额度"
+      "ru": "Send Mail Limit"
     },
     "send_mail_limit_tip": {
       "en": "This applies to all send channels. Use -1 for unlimited and 0 to block sending.",
-      "zh": "对全部发信渠道生效。-1 表示无限，0 表示禁止发送。"
+      "ru": "This applies to all send channels. Use -1 for unlimited and 0 to block sending."
     },
     "send_mail_monthly_limit": {
       "en": "Monthly Limit",
-      "zh": "每月额度"
+      "ru": "Monthly Limit"
     },
     "send_mail_monthly_limit_invalid": {
       "en": "Monthly limit must be an integer greater than or equal to -1",
-      "zh": "每月额度必须是大于等于 -1 的整数"
+      "ru": "Monthly limit must be an integer greater than or equal to -1"
     },
     "source_match_mode": {
       "en": "Match Mode",
-      "zh": "匹配模式"
+      "ru": "Match Mode"
     },
     "source_patterns": {
       "en": "Source Address Regex (Optional)",
-      "zh": "来源地址正则（可选）"
+      "ru": "Source Address Regex (Optional)"
     },
     "source_patterns_placeholder": {
       "en": "e.g. gmail.com",
-      "zh": "例如: gmail.com"
+      "ru": "e.g. gmail.com"
     },
     "source_patterns_tip": {
       "en": "Domain list filters by recipient address, source regex filters by sender address. Both conditions must match for forwarding (AND logic). Leave either empty to skip that filter.",
-      "zh": "域名列表按收件地址过滤，来源正则按发件地址过滤，两者均为可选。同时配置时需同时满足（AND 逻辑），留空则跳过该条件。"
+      "ru": "Domain list filters by recipient address, source regex filters by sender address. Both conditions must match for forwarding (AND logic). Leave either empty to skip that filter."
     },
     "successTip": {
       "en": "Save Success",
-      "zh": "保存成功"
+      "ru": "Save Success"
     },
     "tip": {
       "en": "You can manually input the following multiple select input and enter",
-      "zh": "您可以手动输入以下多选输入框, 回车增加"
+      "ru": "You can manually input the following multiple select input and enter"
     },
     "verified_address_list": {
       "en": "Verified Address List(Can send email by cf internal api)",
-      "zh": "已验证地址列表(可通过 cf 内部 api 发送邮件)"
+      "ru": "Verified Address List(Can send email by cf internal api)"
     }
   },
   "views.admin.Mails": {
     "addressQueryTip": {
       "en": "Leave blank to query all addresses",
-      "zh": "留空查询所有地址"
+      "ru": "Leave blank to query all addresses"
     },
     "query": {
       "en": "Query",
-      "zh": "查询"
+      "ru": "Query"
     }
   },
   "views.admin.Maintenance": {
     "addCustomSql": {
       "en": "Add Custom SQL",
-      "zh": "添加自定义 SQL"
+      "ru": "Add Custom SQL"
     },
     "addressCreateLabel": {
       "en": "Cleanup the address created before n days",
-      "zh": "清理 n 天前创建的地址"
+      "ru": "Cleanup the address created before n days"
     },
     "autoCleanup": {
       "en": "Auto cleanup",
-      "zh": "自动清理"
+      "ru": "Auto cleanup"
     },
     "basicCleanup": {
       "en": "Basic Cleanup",
-      "zh": "基础清理"
+      "ru": "Basic Cleanup"
     },
     "cleanupNow": {
       "en": "Cleanup now",
-      "zh": "立即清理"
+      "ru": "Cleanup now"
     },
     "cleanupSuccess": {
       "en": "Cleanup success",
-      "zh": "清理成功"
+      "ru": "Cleanup success"
     },
     "cronTip": {
       "en": "Enable cron cleanup, need to configure [crons] in worker, please refer to the document, setting 0 days means clear all",
-      "zh": "启用定时清理, 需在 worker 配置 [crons] 参数, 请参考文档, 配置为 0 天表示全部清空"
+      "ru": "Enable cron cleanup, need to configure [crons] in worker, please refer to the document, setting 0 days means clear all"
     },
     "customSqlCleanup": {
       "en": "Custom SQL Cleanup",
-      "zh": "自定义 SQL 清理"
+      "ru": "Custom SQL Cleanup"
     },
     "customSqlTip": {
       "en": "Add custom DELETE SQL statements for scheduled cleanup. Only single DELETE statement is allowed per entry.",
-      "zh": "添加自定义 DELETE SQL 语句进行定时清理。每条记录仅允许单条 DELETE 语句。"
+      "ru": "Add custom DELETE SQL statements for scheduled cleanup. Only single DELETE statement is allowed per entry."
     },
     "deleteCustomSql": {
       "en": "Delete",
-      "zh": "删除"
+      "ru": "Delete"
     },
     "emptyAddressLabel": {
       "en": "Cleanup the empty address before n days",
-      "zh": "清理 n 天前空邮件的邮箱地址"
+      "ru": "Cleanup the empty address before n days"
     },
     "inactiveAddressLabel": {
       "en": "Cleanup the inactive address before n days",
-      "zh": "清理 n 天前的未活跃地址"
+      "ru": "Cleanup the inactive address before n days"
     },
     "mailBoxLabel": {
       "en": "Cleanup the inbox before n days",
-      "zh": "清理 n 天前的收件箱"
+      "ru": "Cleanup the inbox before n days"
     },
     "mailUnknowLabel": {
       "en": "Cleanup the unknow mail before n days",
-      "zh": "清理 n 天前的无收件人邮件"
+      "ru": "Cleanup the unknow mail before n days"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "saveSuccess": {
       "en": "Save success",
-      "zh": "保存成功"
+      "ru": "Save success"
     },
     "sendBoxLabel": {
       "en": "Cleanup the sendbox before n days",
-      "zh": "清理 n 天前的发件箱"
+      "ru": "Cleanup the sendbox before n days"
     },
     "sqlName": {
       "en": "Name",
-      "zh": "名称"
+      "ru": "Name"
     },
     "sqlNamePlaceholder": {
       "en": "e.g. Clean old logs",
-      "zh": "例如: 清理旧日志"
+      "ru": "e.g. Clean old logs"
     },
     "sqlPlaceholder": {
       "en": "e.g. DELETE FROM raw_mails WHERE source GLOB '*{'@'}example.com' AND created_at < datetime('now', '-3 day')",
-      "zh": "例如: DELETE FROM raw_mails WHERE source GLOB '*{'@'}example.com' AND created_at < datetime('now', '-3 day')"
+      "ru": "e.g. DELETE FROM raw_mails WHERE source GLOB '*{'@'}example.com' AND created_at < datetime('now', '-3 day')"
     },
     "sqlStatement": {
       "en": "SQL Statement (DELETE only)",
-      "zh": "SQL 语句 (仅限 DELETE)"
+      "ru": "SQL Statement (DELETE only)"
     },
     "tip": {
       "en": "Please input the days",
-      "zh": "请输入天数"
+      "ru": "Please input the days"
     },
     "unboundAddressLabel": {
       "en": "Cleanup the unbound address before n days",
-      "zh": "清理 n 天前的未绑定用户地址"
+      "ru": "Cleanup the unbound address before n days"
     }
   },
   "views.common.Login": {
     "autoGeneratedName": {
       "en": "Auto-generated name",
-      "zh": "自动生成名称"
+      "ru": "Auto-generated name"
     },
     "bindUserAddressError": {
       "en": "Error when bind email address to user",
-      "zh": "绑定邮箱地址到用户时错误"
+      "ru": "Error when bind email address to user"
     },
     "bindUserInfo": {
       "en": "Logged in user, login without binding email or create new email address will bind to current user",
-      "zh": "已登录用户, 登录未绑定邮箱或创建新邮箱地址将绑定到当前用户"
+      "ru": "Logged in user, login without binding email or create new email address will bind to current user"
     },
     "credential": {
       "en": "Email Address Credential",
-      "zh": "邮箱地址凭据"
+      "ru": "Email Address Credential"
     },
     "credentialInput": {
       "en": "Please input the Mail Address Credential",
-      "zh": "请输入邮箱地址凭据"
+      "ru": "Please input the Mail Address Credential"
     },
     "credentialLogin": {
       "en": "Credential Login",
-      "zh": "凭据登录"
+      "ru": "Credential Login"
     },
     "email": {
       "en": "Email",
-      "zh": "邮箱"
+      "ru": "Email"
     },
     "emailPasswordRequired": {
       "en": "Email and password are required",
-      "zh": "邮箱和密码不能为空"
+      "ru": "Email and password are required"
     },
     "enableRandomSubdomain": {
       "en": "Use Random Subdomain",
-      "zh": "启用随机子域名"
+      "ru": "Use Random Subdomain"
     },
     "generateName": {
       "en": "Generate Fake Name",
-      "zh": "生成随机名字"
+      "ru": "Generate Fake Name"
     },
     "getNewEmail": {
       "en": "Create New Email",
-      "zh": "创建新邮箱"
+      "ru": "Create New Email"
     },
     "getNewEmailTip1": {
       "en": "Please input the email you want to use. only allow: ",
-      "zh": "请输入你想要使用的邮箱地址, 只允许: "
+      "ru": "Please input the email you want to use. only allow: "
     },
     "getNewEmailTip2": {
       "en": "Levaing it blank will generate a random email address.",
-      "zh": "留空将会生成一个随机的邮箱地址。"
+      "ru": "Levaing it blank will generate a random email address."
     },
     "getNewEmailTip3": {
       "en": "You can choose a domain from the dropdown list.",
-      "zh": "你可以从下拉列表中选择一个域名。"
+      "ru": "You can choose a domain from the dropdown list."
     },
     "help": {
       "en": "Help",
-      "zh": "帮助"
+      "ru": "Help"
     },
     "login": {
       "en": "Login",
-      "zh": "登录"
+      "ru": "Login"
     },
     "loginAndBind": {
       "en": "Login and Bind",
-      "zh": "登录并绑定"
+      "ru": "Login and Bind"
     },
     "ok": {
       "en": "OK",
-      "zh": "确定"
+      "ru": "OK"
     },
     "password": {
       "en": "Password",
-      "zh": "密码"
+      "ru": "Password"
     },
     "passwordLogin": {
       "en": "Password Login",
-      "zh": "密码登录"
+      "ru": "Password Login"
     },
     "pleaseGetNewEmail": {
       "en": "Please login or click \"Get New Email\" button to get a new email address",
-      "zh": "请\"登录\"或点击 \"注册新邮箱\" 按钮来获取一个新的邮箱地址"
+      "ru": "Please login or click \"Get New Email\" button to get a new email address"
     },
     "randomSubdomainTip": {
       "en": "When enabled, the created address will use a random subdomain. Subdomain addresses are recommended for receiving only.",
-      "zh": "启用后，创建出来的地址会自动挂在随机子域名下。子域名地址更建议仅用于收件。"
+      "ru": "When enabled, the created address will use a random subdomain. Subdomain addresses are recommended for receiving only."
     }
   },
   "views.admin.Webhook": {
     "enableAllowList": {
       "en": "Enable Allow List (Restrict webhook access to specific users)",
-      "zh": "启用白名单 (限制 webhook 访问权限，只有白名单中的用户可以使用)"
+      "ru": "Enable Allow List (Restrict webhook access to specific users)"
     },
     "manualInputPrompt": {
       "en": "Type and press Enter to add",
-      "zh": "输入后按回车键添加"
+      "ru": "Type and press Enter to add"
     },
     "notEnabled": {
       "en": "Webhook is not enabled",
-      "zh": "Webhook 未开启"
+      "ru": "Webhook is not enabled"
     },
     "save": {
       "en": "Save",
-      "zh": "保存"
+      "ru": "Save"
     },
     "successTip": {
       "en": "Success",
-      "zh": "成功"
+      "ru": "Success"
     },
     "webhookAllowList": {
       "en": "Webhook Allow List(Enter the mail address that is allowed to use webhook and enter)",
-      "zh": "Webhook 白名单(请输入允许使用webhook 的邮箱地址, 回车增加)"
+      "ru": "Webhook Allow List(Enter the mail address that is allowed to use webhook and enter)"
     }
   },
   "views.common.AdminContact": {
     "adminContact": {
       "en": "If you need help, please contact the administrator ({msg})",
-      "zh": "如果你需要帮助，请联系管理员 ({msg})"
+      "ru": "If you need help, please contact the administrator ({msg})"
     }
   }
 } as const
@@ -2569,7 +2569,7 @@ export type MessageKey<N extends MessageNamespace> = keyof MessageRegistry[N]
 export const getMessageSource = <N extends MessageNamespace>(
   namespace: N,
   key: MessageKey<N>,
-  locale: 'en' | 'zh',
+  locale: 'en' | 'ru',
 ) => {
   return MESSAGE_REGISTRY[namespace]?.[key]?.[locale]
 }

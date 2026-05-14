@@ -10,7 +10,14 @@
 
 ### Features
 
-- feat: |Frontend| 将邮箱地址凭证弹窗升级为“地址凭证与连接方式”，复用普通用户与 admin 创建邮箱结果弹窗；支持通过 `ENABLE_AGENT_EMAIL_INFO` 展示 AI Agent 接入信息，并通过 `SMTP_IMAP_PROXY_CONFIG` 展示 SMTP/IMAP 客户端连接信息
+- feat: |Refactor| 启动多阶段重构（详见 `PLAN.md`）：阶段 1 落地 monorepo / i18n / 主题 / Vuetify 基础 / 数据库化配置；阶段 2 拆分三个独立 Pages 站点（admin / mail / tempmail）并完成 MD3 重设计；阶段 3 引入 TOTP 2FA、反爆破、公开 REST API + Swagger
+- feat: |Frontend| 将前端拆分为 pnpm workspaces monorepo：`packages/admin`（沿用现有 Naive UI 管理后台）、`packages/shared`（共享 MD3 主题/i18n/工具）、`packages/mail` 与 `packages/tempmail`（Vuetify 3 stub，阶段 2 完整实现）
+- feat: |i18n| 仅保留 EN（默认）与 RU 两种 UI 语言，删除 zh / es / ja / de / pt-BR；message-registry 通过脚本批量改造为 en+ru 结构，俄文初始等于英文文案，留作后续翻译 PR
+- feat: |Theme| 共享包加入 Material Design 3 主题层：Light / Dark / AMOLED 三档模式 + Auto + 8 种 accent 色（indigo/blue/green/orange/red/purple/teal/pink），通过 `useColorMode` / `useAccentColor` / `useThemeSync` 持久化与同步到 Vuetify
+- feat: |Worker| 新增 `system_settings` 数据库表：分类（general/domains/tempmail/email/telegram/oauth/ai/webhook/security）的键值配置，敏感项通过 `worker/src/auth/encryption.ts`（AES-GCM + PBKDF2，基于 `JWT_SECRET`）加密存储
+- feat: |Worker| 新增 admin API：`GET/POST /admin/system/settings`、`DELETE /admin/system/settings/:key`、`POST /admin/system/test`（支持 telegram / webhook / secret 三种连通性测试）
+- feat: |Worker| 新增 `getEnvOrSetting()` 工具：读取顺序 env → 数据库 → 默认值，为阶段 2 把 env 配置迁移到 UI 提供平滑路径
+- feat: |Worker| i18n 切换为 EN（默认） + RU，删除 zh 翻译；Telegram `/lang` 命令现接受 `en` / `ru`
 
 ### Bug Fixes
 
@@ -21,6 +28,8 @@
 - fix: |Frontend| 修复 iOS Safari 点击输入框时因移动端表单控件字号过小导致页面自动放大的问题
 
 ### Improvements
+
+- chore: |CI| 调整 `.github/workflows/frontend_deploy.yaml`、`frontend_pagefunction_deploy.yaml`、`tag_build.yml`，将构建命令切换为 `pnpm --filter @cte/admin run <script>`，并把 dist 路径从 `frontend/dist/` 更新为 `frontend/packages/admin/dist/`
 
 ## v1.8.0
 

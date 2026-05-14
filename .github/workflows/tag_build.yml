@@ -24,10 +24,10 @@ jobs:
           run_install: false
 
       - name: Build Frontend
-        run: cd frontend && pnpm install --no-frozen-lockfile && pnpm build:release
+        run: cd frontend && pnpm install --no-frozen-lockfile && pnpm --filter @cte/admin run build:release
 
       - name: Zip Frontend dist
-        run: cd frontend/dist/ && zip -r frontend.zip * && mv frontend.zip ../
+        run: cd frontend/packages/admin/dist/ && zip -r frontend.zip * && mv frontend.zip ../../../
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
@@ -53,10 +53,10 @@ jobs:
           run_install: false
 
       - name: Build Telegram Frontend
-        run: cd frontend && pnpm install --no-frozen-lockfile && pnpm build:telegram:release
+        run: cd frontend && pnpm install --no-frozen-lockfile && pnpm --filter @cte/admin run build:telegram:release
 
       - name: Zip Telegram Frontend dist
-        run: cd frontend/dist/ && zip -r telegram-frontend.zip * && mv telegram-frontend.zip ../
+        run: cd frontend/packages/admin/dist/ && zip -r telegram-frontend.zip * && mv telegram-frontend.zip ../../../
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7

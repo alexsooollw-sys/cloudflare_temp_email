@@ -1,16 +1,6 @@
 import {
-  dateDeDE,
   dateEnUS,
-  dateEsAR,
-  dateJaJP,
-  datePtBR,
-  dateZhCN,
-  deDE,
   enUS,
-  esAR,
-  jaJP,
-  ptBR,
-  zhCN,
 } from 'naive-ui'
 
 import type { NDateLocale, NLocale } from 'naive-ui'
@@ -28,14 +18,14 @@ type LocaleRegistryEntry = {
   turnstileLocale: string
 }
 
+/**
+ * Supported UI locales. Stage 1 limits the UI to English (default) + Russian.
+ *
+ * Russian uses the English Naive UI locale for now — Naive UI does not ship a
+ * built-in `ruRU` bundle, so dates / time pickers stay English. A custom
+ * Russian Naive UI locale can be added later if needed.
+ */
 export const LOCALE_REGISTRY = [
-  {
-    locale: 'zh',
-    label: '中文',
-    browserMatches: ['zh'],
-    naive: { locale: zhCN, dateLocale: dateZhCN },
-    turnstileLocale: 'zh-CN',
-  },
   {
     locale: 'en',
     label: 'English',
@@ -44,32 +34,11 @@ export const LOCALE_REGISTRY = [
     turnstileLocale: 'en',
   },
   {
-    locale: 'es',
-    label: 'Español',
-    browserMatches: ['es'],
-    naive: { locale: esAR, dateLocale: dateEsAR },
-    turnstileLocale: 'es',
-  },
-  {
-    locale: 'pt-BR',
-    label: 'Português (Brasil)',
-    browserMatches: ['pt'],
-    naive: { locale: ptBR, dateLocale: datePtBR },
-    turnstileLocale: 'pt-BR',
-  },
-  {
-    locale: 'ja',
-    label: '日本語',
-    browserMatches: ['ja'],
-    naive: { locale: jaJP, dateLocale: dateJaJP },
-    turnstileLocale: 'ja',
-  },
-  {
-    locale: 'de',
-    label: 'Deutsch',
-    browserMatches: ['de'],
-    naive: { locale: deDE, dateLocale: dateDeDE },
-    turnstileLocale: 'de',
+    locale: 'ru',
+    label: 'Русский',
+    browserMatches: ['ru'],
+    naive: { locale: enUS, dateLocale: dateEnUS },
+    turnstileLocale: 'ru',
   },
 ] as const satisfies readonly LocaleRegistryEntry[]
 
@@ -104,4 +73,3 @@ export const getNaiveLocaleConfig = (locale: SupportedLocale) => {
 export const getTurnstileLocale = (locale: SupportedLocale) => {
   return getLocaleRegistryEntry(locale).turnstileLocale
 }
-

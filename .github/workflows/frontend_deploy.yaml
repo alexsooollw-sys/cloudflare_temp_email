@@ -31,15 +31,15 @@ jobs:
         if: ${{ env.FRONTEND_NAME != '' }}
         run: |
           cd frontend/
-          echo "${{ secrets.FRONTEND_ENV }}" > .env.prod
+          echo "${{ secrets.FRONTEND_ENV }}" > packages/admin/.env.prod
           pnpm install --no-frozen-lockfile
           export frontend_branch="${{ secrets.FRONTEND_BRANCH }}"
           if [ -n "$frontend_branch" ]; then
             echo "Deploying branch $frontend_branch"
-            pnpm run deploy:actions --project-name=$FRONTEND_NAME --branch $frontend_branch
+            pnpm --filter @cte/admin run deploy:actions --project-name=$FRONTEND_NAME --branch $frontend_branch
           else
             echo "Deploying branch production"
-            pnpm run deploy --project-name=$FRONTEND_NAME
+            pnpm --filter @cte/admin run deploy --project-name=$FRONTEND_NAME
           fi
           echo "Deployed for tag ${{ github.ref_name }}"
         env:
@@ -68,15 +68,15 @@ jobs:
         if: ${{ env.TG_FRONTEND_NAME != '' }}
         run: |
           cd frontend/
-          echo "${{ secrets.FRONTEND_ENV }}" > .env.prod
+          echo "${{ secrets.FRONTEND_ENV }}" > packages/admin/.env.prod
           pnpm install --no-frozen-lockfile
           export frontend_branch="${{ secrets.FRONTEND_BRANCH }}"
           if [ -n "$frontend_branch" ]; then
             echo "Deploying telegram mini app branch $frontend_branch"
-            pnpm run deploy:actions:telegram --project-name=$TG_FRONTEND_NAME --branch $frontend_branch
+            pnpm --filter @cte/admin run deploy:actions:telegram --project-name=$TG_FRONTEND_NAME --branch $frontend_branch
           else
             echo "Deploying telegram mini app branch production"
-            pnpm run deploy:telegram --project-name=$TG_FRONTEND_NAME
+            pnpm --filter @cte/admin run deploy:telegram --project-name=$TG_FRONTEND_NAME
           fi
           echo "Deployed telegram mini app for ${{ github.ref_name }}"
         env:

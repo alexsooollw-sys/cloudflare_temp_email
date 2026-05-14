@@ -24,7 +24,7 @@ const getTgMessages = async (
 ): Promise<LocaleMessages> => {
     // Check if user language config is enabled (default false)
     if (!getBooleanValue(c.env.TG_ALLOW_USER_LANG)) {
-        return i18n.getMessages(c.env.DEFAULT_LANG || 'zh');
+        return i18n.getMessages(c.env.DEFAULT_LANG || 'en');
     }
 
     const uid = userId || ctx?.message?.from?.id?.toString() || ctx?.callbackQuery?.from?.id?.toString();
@@ -32,7 +32,7 @@ const getTgMessages = async (
         const savedLang = await c.env.KV.get(`${CONSTANTS.TG_KV_PREFIX}:lang:${uid}`);
         if (savedLang) { return i18n.getMessages(savedLang); }
     }
-    return i18n.getMessages(c.env.DEFAULT_LANG || 'zh');
+    return i18n.getMessages(c.env.DEFAULT_LANG || 'en');
 };
 
 // Bilingual command descriptions with full usage instructions
@@ -268,9 +268,9 @@ export function newTelegramBot(c: Context<HonoCustomType>, token: string): Teleg
 
         // @ts-ignore
         const lang = ctx?.message?.text.slice("/lang".length).trim().toLowerCase();
-        if (lang === 'zh' || lang === 'en') {
+        if (lang === 'ru' || lang === 'en') {
             await c.env.KV.put(`${CONSTANTS.TG_KV_PREFIX}:lang:${userId}`, lang);
-            return await ctx.reply(`${msgs.TgLangSetSuccessMsg} ${lang === 'zh' ? '中文' : 'English'}`);
+            return await ctx.reply(`${msgs.TgLangSetSuccessMsg} ${lang === 'ru' ? 'Русский' : 'English'}`);
         }
 
         const currentLang = await c.env.KV.get(`${CONSTANTS.TG_KV_PREFIX}:lang:${userId}`);
@@ -450,7 +450,7 @@ export async function sendMailToTelegram(
     };
 
     if (globalPush) {
-        const globalMsgs = i18n.getMessages(c.env.DEFAULT_LANG || 'zh');
+        const globalMsgs = i18n.getMessages(c.env.DEFAULT_LANG || 'en');
         for (const pushId of settings.globalMailPushList) {
             await buildAndSend(pushId, globalMsgs);
         }

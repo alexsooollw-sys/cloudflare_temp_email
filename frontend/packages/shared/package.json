@@ -1,0 +1,29 @@
+{
+  "name": "@cte/shared",
+  "version": "1.9.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme": "./src/theme/index.ts",
+    "./theme/vuetify": "./src/theme/vuetify.ts",
+    "./theme/composables": "./src/theme/composables.ts",
+    "./i18n": "./src/i18n/index.ts",
+    "./i18n/locales/en": "./src/i18n/locales/en.ts",
+    "./i18n/locales/ru": "./src/i18n/locales/ru.ts",
+    "./api": "./src/api/index.ts",
+    "./styles/vuetify.css": "./src/styles/vuetify.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0",
+    "vue-i18n": "^11.0.0",
+    "vuetify": "^3.5.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "^14.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

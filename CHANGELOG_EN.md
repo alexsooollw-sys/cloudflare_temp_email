@@ -10,7 +10,14 @@
 
 ### Features
 
-- feat: |Frontend| Upgrade the address credential dialog to "Address Credentials & Connection Methods" and reuse it for both normal users and admin-created addresses; support showing AI Agent access via `ENABLE_AGENT_EMAIL_INFO` and SMTP/IMAP client settings via `SMTP_IMAP_PROXY_CONFIG`
+- feat: |Refactor| Kick off the multi-stage refactor (see `PLAN.md`): Stage 1 lands the monorepo, i18n cleanup, themes, Vuetify base and DB-backed settings; Stage 2 splits the frontend into three separate Pages projects (admin / mail / tempmail) with a Material Design 3 redesign; Stage 3 adds TOTP 2FA, brute-force protection, public REST API + Swagger
+- feat: |Frontend| Convert the frontend into a pnpm workspaces monorepo: `packages/admin` (existing Naive UI admin panel kept working), `packages/shared` (shared MD3 theme / i18n / utilities), plus `packages/mail` and `packages/tempmail` Vuetify 3 stubs to be fleshed out in Stage 2
+- feat: |i18n| Drop all UI locales other than English (default) and Russian. Removed zh / es / ja / de / pt-BR sources; message-registry was script-converted from `en+zh` to `en+ru`, with Russian initially equal to English as a placeholder for a dedicated translation pass
+- feat: |Theme| Add a Material Design 3 theme layer in the shared package: three modes (Light / Dark / AMOLED) plus Auto, eight accent colours (indigo / blue / green / orange / red / purple / teal / pink), exposed via `useColorMode` / `useAccentColor` / `useThemeSync` and bound to Vuetify
+- feat: |Worker| Add a `system_settings` D1 table — typed, categorised key/value store (general / domains / tempmail / email / telegram / oauth / ai / webhook / security). Secrets are AES-GCM encrypted via `worker/src/auth/encryption.ts` (PBKDF2 over `JWT_SECRET`)
+- feat: |Worker| Add admin endpoints: `GET/POST /admin/system/settings`, `DELETE /admin/system/settings/:key`, `POST /admin/system/test` (supports `telegram` / `webhook` / `secret` connectivity probes)
+- feat: |Worker| Add `getEnvOrSetting()` helper — resolution order env → DB → default — to let Stage 2 migrate env-vars into the admin UI without breaking existing deployments
+- feat: |Worker| i18n switched to EN (default) + RU; zh translations removed. Telegram `/lang` command now accepts `en` / `ru`
 
 ### Bug Fixes
 
@@ -21,6 +28,8 @@
 - fix: |Frontend| Prevent iOS Safari from auto-zooming the page when focusing mobile form controls with small font sizes
 
 ### Improvements
+
+- chore: |CI| Update `.github/workflows/frontend_deploy.yaml`, `frontend_pagefunction_deploy.yaml` and `tag_build.yml` to invoke `pnpm --filter @cte/admin run <script>` and rebase the dist path from `frontend/dist/` to `frontend/packages/admin/dist/`
 
 ## v1.8.0
 

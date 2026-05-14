@@ -1,8 +1,9 @@
 import { Context } from "hono";
 import { createMimeMessage } from "mimetext";
 import { UserSettings, RoleAddressConfig } from "./models";
-import { CONSTANTS } from "./constants";
+import { CONSTANTS, type SystemSettingCategory } from "./constants";
 import { compressText } from "./gzip";
+import { decryptString, encryptString } from "./auth/encryption";
 
 export const getJsonObjectValue = <T = any>(
     value: string | any
@@ -405,6 +406,167 @@ export const isAddressCountLimitReached = async (
     return count >= maxAddressCount;
 };
 
+// =============================================================================
+// system_settings — typed/categorised store with optional AES-GCM encryption.
+// Separate from the legacy `settings` table (getSetting/saveSetting) to keep
+// migration risk low.
+// =============================================================================
+
+export type SystemSettingRow = {
+    key: string;
+    value: string | null;
+    encrypted_value: ArrayBuffer | Uint8Array | null;
+    category: string | null;
+    updated_at: string | null;
+};
+
+/**
+ * Read and parse a value from system_settings.
+ *
+ * - If `encrypted_value` is present, it is AES-GCM-decrypted on JWT_SECRET.
+ * - Plaintext `value` is JSON-parsed (so scalars are stored as `"x"` / `42` / `true`).
+ * - Returns `defaultValue` when the row is missing or any error occurs.
+ */
+export const getSystemSetting = async <T = string>(
+    c: Context<HonoCustomType>,
+    key: string,
+    defaultValue?: T,
+): Promise<T | undefined> => {
+    try {
+        const row = await c.env.DB.prepare(
+            `SELECT key, value, encrypted_value FROM system_settings WHERE key = ?`,
+        )
+            .bind(key)
+            .first<{ value: string | null; encrypted_value: ArrayBuffer | null }>();
+
+        if (!row) return defaultValue;
+
+        let raw: string | null = null;
+        if (row.encrypted_value) {
+            raw = await decryptString(row.encrypted_value, c.env.JWT_SECRET);
+        } else if (row.value !== null && row.value !== undefined) {
+            raw = row.value;
+        }
+
+        if (raw === null) return defaultValue;
+        try {
+            return JSON.parse(raw) as T;
+        } catch {
+            // not valid JSON — return the raw string as-is. Useful for
+            // single-string secrets where callers may opt out of JSON wrap.
+            return raw as unknown as T;
+        }
+    } catch (error) {
+        console.error(`getSystemSetting(${key}) failed`, error);
+        return defaultValue;
+    }
+};
+
+/**
+ * Save a value to system_settings.
+ *
+ *   opts.encrypted=true  — value is JSON-stringified then AES-GCM-encrypted,
+ *                          stored in `encrypted_value`, `value` is NULL.
+ *   opts.encrypted=false — value is JSON-stringified into `value`,
+ *                          `encrypted_value` is NULL.
+ */
+export const saveSystemSetting = async (
+    c: Context<HonoCustomType>,
+    key: string,
+    value: unknown,
+    opts: { encrypted?: boolean; category?: SystemSettingCategory } = {},
+): Promise<void> => {
+    const category = opts.category ?? "general";
+    const serialised = JSON.stringify(value);
+
+    if (opts.encrypted) {
+        const cipher = await encryptString(serialised, c.env.JWT_SECRET);
+        await c.env.DB.prepare(
+            `INSERT INTO system_settings (key, value, encrypted_value, category, updated_at)
+             VALUES (?, NULL, ?, ?, datetime('now'))
+             ON CONFLICT(key) DO UPDATE SET
+                value = NULL,
+                encrypted_value = excluded.encrypted_value,
+                category = excluded.category,
+                updated_at = datetime('now')`,
+        )
+            .bind(key, cipher, category)
+            .run();
+        return;
+    }
+
+    await c.env.DB.prepare(
+        `INSERT INTO system_settings (key, value, encrypted_value, category, updated_at)
+         VALUES (?, ?, NULL, ?, datetime('now'))
+         ON CONFLICT(key) DO UPDATE SET
+            value = excluded.value,
+            encrypted_value = NULL,
+            category = excluded.category,
+            updated_at = datetime('now')`,
+    )
+        .bind(key, serialised, category)
+        .run();
+};
+
+export const deleteSystemSetting = async (
+    c: Context<HonoCustomType>,
+    key: string,
+): Promise<void> => {
+    await c.env.DB.prepare(`DELETE FROM system_settings WHERE key = ?`).bind(key).run();
+};
+
+/**
+ * Read every row in a category (or all rows when category is omitted).
+ * The raw row objects are returned — caller is responsible for masking secrets
+ * before sending to clients.
+ */
+export const listSystemSettings = async (
+    c: Context<HonoCustomType>,
+    category?: string,
+): Promise<SystemSettingRow[]> => {
+    const stmt = category
+        ? c.env.DB.prepare(
+            `SELECT key, value, encrypted_value, category, updated_at
+             FROM system_settings WHERE category = ?
+             ORDER BY key ASC`,
+        ).bind(category)
+        : c.env.DB.prepare(
+            `SELECT key, value, encrypted_value, category, updated_at
+             FROM system_settings
+             ORDER BY category ASC, key ASC`,
+        );
+
+    const result = await stmt.all<SystemSettingRow>();
+    return (result.results || []) as SystemSettingRow[];
+};
+
+/**
+ * Resolve a configuration value with priority:
+ *   1. env var (if defined and truthy)
+ *   2. system_settings row (if settingKey provided)
+ *   3. defaultValue
+ *
+ * Used to migrate env-vars into the DB incrementally — while the env-var is
+ * set, it wins; remove it from wrangler.toml to switch to the DB-managed
+ * value with no code change.
+ */
+export const getEnvOrSetting = async <T = string>(
+    c: Context<HonoCustomType>,
+    envKey: string,
+    settingKey?: string,
+    defaultValue?: T,
+): Promise<T | undefined> => {
+    const envVal = (c.env as unknown as Record<string, unknown>)[envKey];
+    if (envVal !== undefined && envVal !== null && envVal !== "") {
+        return envVal as T;
+    }
+    if (settingKey) {
+        const dbVal = await getSystemSetting<T>(c, settingKey);
+        if (dbVal !== undefined) return dbVal;
+    }
+    return defaultValue;
+};
+
 export default {
     getJsonObjectValue,
     getSetting,
@@ -429,5 +591,10 @@ export default {
     checkUserPassword,
     getJsonSetting,
     getJsonValue: getJsonObjectValue,
-    getStringList: getStringArray
+    getStringList: getStringArray,
+    getSystemSetting,
+    saveSystemSetting,
+    deleteSystemSetting,
+    listSystemSettings,
+    getEnvOrSetting,
 }

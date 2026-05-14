@@ -37,7 +37,7 @@ const modalShow = computed({
 const configuredApiBaseUrl = import.meta.env.VITE_API_BASE || ''
 const frontendBaseUrl = computed(() => window.location.origin)
 const apiBaseUrl = computed(() => (configuredApiBaseUrl || frontendBaseUrl.value).replace(/\/$/, ''))
-const docLocale = computed(() => locale.value === 'zh' ? 'zh' : 'en')
+const docLocale = computed(() => locale.value === 'ru' ? 'ru' : 'en')
 const agentDocUrl = computed(() => `https://temp-mail-docs.awsl.uk/${docLocale.value}/guide/feature/agent-email.html`)
 const smtpImapDocUrl = computed(() => `https://temp-mail-docs.awsl.uk/${docLocale.value}/guide/feature/config-smtp-proxy.html`)
 const agentSkillUrl = 'https://github.com/dreamhunter2333/cloudflare_temp_email/blob/main/skills/cf-temp-mail-agent-mail/SKILL.md'

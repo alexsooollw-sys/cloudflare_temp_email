@@ -28,4 +28,21 @@ export const CONSTANTS = {
     WEBHOOK_KV_ADMIN_MAIL_SETTINGS_KEY: "temp-mail-webhook-admin-mail-settings",
     SEND_MAIL_LIMIT_COUNT_KEY_PREFIX: "send_mail_limit_count:",
     SEND_MAIL_LIMIT_CONFIG_KEY: "send_mail_limit_config",
+
+    // system_settings: typed/categorised store, secrets are AES-GCM encrypted
+    // on c.env.JWT_SECRET. See worker/src/auth/encryption.ts.
+    SYSTEM_SETTINGS_CATEGORIES: [
+        "general",
+        "domains",
+        "tempmail",
+        "email",
+        "telegram",
+        "oauth",
+        "ai",
+        "webhook",
+        "security",
+    ] as const,
 }
+
+export type SystemSettingCategory = (typeof CONSTANTS.SYSTEM_SETTINGS_CATEGORIES)[number]
+

@@ -18,6 +18,7 @@ import db_api from './db_api'
 import ip_blacklist_settings from './ip_blacklist_settings'
 import ai_extract_settings from './ai_extract_settings'
 import e2e_test_api from './e2e_test_api'
+import system_settings from './system_settings'
 
 export const api = new Hono<HonoCustomType>()
 
@@ -106,3 +107,9 @@ api.post('/admin/ai_extract/settings', ai_extract_settings.saveAiExtractSettings
 // E2E test endpoints
 api.post('/admin/test/seed_mail', e2e_test_api.seedMail)
 api.post('/admin/test/receive_mail', e2e_test_api.receiveMail)
+
+// System settings (typed/categorised store with AES-GCM encryption)
+api.get('/admin/system/settings', system_settings.list)
+api.post('/admin/system/settings', system_settings.save)
+api.delete('/admin/system/settings/:key', system_settings.remove)
+api.post('/admin/system/test', system_settings.test)
