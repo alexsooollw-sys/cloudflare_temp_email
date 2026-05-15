@@ -50,10 +50,13 @@ jobs:
           cd frontend/
           pnpm install --no-frozen-lockfile
           pnpm --filter @cte/admin run build:pages
-          # Copy admin's dist to the pages function root so the page function
-          # middleware picks up the static assets at the expected path.
-          rm -rf ../pages/dist
-          cp -r packages/admin/dist ../pages/dist
+          # The legacy pages/wrangler.toml (supplied as the PAGE_TOML secret)
+          # has `pages_build_output_dir = "../frontend/dist"`. Stage 1 moved
+          # the artefact to `frontend/packages/admin/dist/`; we re-expose it
+          # at the legacy location so older PAGE_TOML secrets keep working
+          # without operator intervention.
+          rm -rf dist
+          cp -r packages/admin/dist ./dist
           cd ../pages/
           echo '${{ secrets.PAGE_TOML }}' > wrangler.toml
           pnpm install --no-frozen-lockfile
