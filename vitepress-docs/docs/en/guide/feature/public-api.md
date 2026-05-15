@@ -5,6 +5,11 @@
 > `/public_api/v1/*` on the same Worker that powers the admin / address
 > APIs.
 >
+> **Interactive docs:** once deployed, the worker also serves
+> [Swagger UI](https://swagger.io/tools/swagger-ui/) at
+> `/public_api/docs` and the raw OpenAPI 3.1 specification at
+> `/public_api/openapi.json`.
+>
 > Auth model:
 > * `/domains`, `/accounts`, `/token`, `/public/*` — **no auth**, only
 >   per-IP rate limits.

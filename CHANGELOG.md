@@ -10,6 +10,7 @@
 
 ### Features
 
+- feat: |Refactor 阶段 4 — API 文档| 为 `/public_api/v1/*` 提供交互式文档：手写的 OpenAPI 3.1 规范挂载在 `/public_api/openapi.json`（位于 `worker/src/public_api/openapi.ts`，与 handlers 同处一个目录便于同步更新），加上 CDN 拉取的 Swagger UI 页面 `/public_api/docs`。无需引入 `@hono/zod-openapi`，worker bundle 体积仅 +5 KiB
 - feat: |Refactor 阶段 3 安全| 管理员 2FA + 反爆破 + 审计日志：
   - 新增 `admin_accounts` 表（用户名 / 哈希密码 / 加密 TOTP 密钥 / 失败次数 / 锁定到期），`/open_api/admin_login` 在原有 env-var 通道之上新增 DB 凭证流；启用 2FA 时返回 `{ require_totp, challenge }` 短期挑战，`/open_api/admin_login_totp` 校验 6 位 RFC 6238 TOTP 后下发 12 小时 admin session JWT
   - TOTP 模块 `worker/src/auth/totp.ts` 完全基于 Web Crypto，已对 RFC 6238 全部 5 条 SHA-1 测试向量与 8 位变体逐一通过验证

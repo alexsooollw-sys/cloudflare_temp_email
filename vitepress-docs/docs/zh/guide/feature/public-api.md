@@ -3,6 +3,10 @@
 > 阶段 2 为 `tempmail.domain.com` 引入了一组公开 REST 接口，挂载在与
 > admin / address API 同一个 Worker 下的 `/public_api/v1/*`。
 >
+> **交互式文档：** 部署后 Worker 同时在 `/public_api/docs` 提供
+> [Swagger UI](https://swagger.io/tools/swagger-ui/) 页面，
+> 原始 OpenAPI 3.1 规范位于 `/public_api/openapi.json`。
+>
 > 认证：
 > * `/domains`、`/accounts`、`/token`、`/public/*` —— **无需认证**，仅按 IP 限流。
 > * 其他端点 —— `Authorization: Bearer <jwt>`，token 来自 `/accounts` 或 `/token`。

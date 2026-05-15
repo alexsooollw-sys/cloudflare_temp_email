@@ -10,6 +10,7 @@
 
 ### Features
 
+- feat: |Refactor stage 4 — API docs| Interactive Swagger UI for the `/public_api/v1/*` surface: hand-rolled OpenAPI 3.1 spec served from `/public_api/openapi.json` (in `worker/src/public_api/openapi.ts`, kept next to the handlers so they stay in sync) plus a static Swagger UI page at `/public_api/docs` that loads `swagger-ui-dist` from the official jsDelivr CDN. No `@hono/zod-openapi` rewrite needed — worker bundle grows only ~5 KiB
 - feat: |Refactor stage 3 — security| Admin 2FA + brute-force protection + audit log:
   - New `admin_accounts` table (username, password hash, AES-GCM-encrypted TOTP secret, failed-attempts counter, lockout). `/open_api/admin_login` adds a DB credential path next to the existing env-var path; when 2FA is enabled it returns a short-lived `{ require_totp, challenge }` and `/open_api/admin_login_totp` validates the 6-digit RFC 6238 code, then issues a 12-hour admin session JWT
   - TOTP implementation in `worker/src/auth/totp.ts` is pure Web Crypto and passes all five RFC 6238 SHA-1 test vectors (plus the 8-digit variant), verified locally
