@@ -12,6 +12,7 @@
 
 ### Features
 
+- docs: |Upgrade| 新增 [`UPGRADE.md`](./UPGRADE.md) — 简短的 v1.x → v2.0 升级清单（~15 分钟，6 步 + verify + rollback + FAQ），针对已有部署。完整变更说明留在 `MIGRATION_v1_to_v2.md`；双语 README 在 v2.0 概览开头加入升级清单链接。
 - feat: |i18n RU| 完整俄语翻译 admin 控制台所有面向用户字符串：611/626 keys（97.6%）从 `ru = en` 占位升级为正式俄语翻译。剩余 15 个 — 品牌名、技术缩写（STARTTLS、SMTP / IMAP、OK、HTML）和数字占位符（000000），它们与英语形式重合。`message-registry.ts` 体积 +12 KiB minified（admin chunk 1340 → 1352 KiB）。
 - feat: |Admin UI| Stage 3 / 1 后端能力终于在管理面板内可用，无需 curl：
   - **Account & Security** 视图：TOTP 2FA setup 弹窗（otpauth URL + base32 secret 一键复制 + 6 位验证码确认）、disable 流程、修改管理员密码、显示用户名 / 上次登录时间和 IP

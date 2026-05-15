@@ -46,6 +46,10 @@
 
 ## ✨ New in v2.0
 
+> 📌 **Upgrading from v1.x?** Use the short [UPGRADE.md checklist](./UPGRADE.md) (~15 min).
+> Want a detailed walkthrough of every change first — read the
+> [full migration guide](./MIGRATION_v1_to_v2.md).
+
 * **Multi-site deployment** — `admin.domain.com` / `mail.domain.com` / `tempmail.domain.com` are now three independent Cloudflare Pages projects backed by a single shared Worker API. See [DEPLOY.md](./DEPLOY.md) and the [migration guide](./MIGRATION_v1_to_v2.md).
 * **Public REST API** — `/public_api/v1/*` exposes the full lifecycle for anonymous (mail.tm-style) mailboxes, with interactive Swagger UI at `/public_api/docs`.
 * **Admin security** — TOTP 2FA + KV-backed brute-force protection + `admin_audit_log`. Secrets in the new `system_settings` table are AES-GCM encrypted with a `JWT_SECRET`-derived key.

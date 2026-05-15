@@ -12,6 +12,7 @@
 
 ### Features
 
+- docs: |Upgrade| Add [`UPGRADE.md`](./UPGRADE.md) — a short v1.x → v2.0 upgrade checklist (~15 min, 6 steps + verify + rollback + FAQ) targeting existing deployments. The detailed change-by-change walkthrough stays in `MIGRATION_v1_to_v2.md`; both READMEs link to the checklist at the top of the v2.0 overview.
 - feat: |i18n RU| Full Russian translation of every user-facing admin string: 611/626 keys (97.6%) upgraded from the `ru = en` placeholder produced by Stage 1 to real, hand-written Russian. The remaining 15 strings are intentionally identical to the English form — brand names, technical abbreviations (STARTTLS, SMTP / IMAP, OK, HTML) and numeric placeholders (000000). `message-registry.ts` grows by ~12 KiB minified (admin chunk 1340 → 1352 KiB).
 - feat: |Admin UI| Stage 3 / 1 backend capabilities finally usable from the admin panel — no curl required:
   - **Account & Security** view — TOTP 2FA setup dialog (otpauth URL + base32 secret with one-click copy + 6-digit confirmation), disable flow, change-password form, display of username / last login at / last login IP

@@ -46,6 +46,9 @@
 
 ## ✨ v2.0 新增
 
+> 📌 **从 v1.x 升级？** 直接看 [简短升级清单 UPGRADE.md](./UPGRADE.md)（约 15 分钟）。
+> 想了解每项变更细节再升级 — [完整迁移指南 MIGRATION_v1_to_v2.md](./MIGRATION_v1_to_v2.md)。
+
 * **多站点部署** — `admin.domain.com` / `mail.domain.com` / `tempmail.domain.com` 三个独立 Cloudflare Pages 项目，共用同一个 Worker API。详见 [DEPLOY.md](./DEPLOY.md) 与 [迁移指南](./MIGRATION_v1_to_v2.md)。
 * **公开 REST API** — `/public_api/v1/*` 为匿名（mail.tm 风格）临时邮箱提供完整生命周期接口，附 `/public_api/docs` Swagger UI。
 * **管理员安全** — TOTP 2FA + KV 反爆破 + `admin_audit_log` 审计日志，敏感配置通过 AES-GCM 加密存于 `system_settings` 表。
