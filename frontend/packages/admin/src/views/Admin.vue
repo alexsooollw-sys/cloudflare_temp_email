@@ -30,6 +30,10 @@ import MailWebhook from './admin/MailWebhook.vue';
 import WorkerConfig from './admin/WorkerConfig.vue';
 import IpBlacklistSettings from './admin/IpBlacklistSettings.vue';
 import AiExtractSettings from './admin/AiExtractSettings.vue';
+import AccountSecurity from './admin/AccountSecurity.vue';
+import AuditLog from './admin/AuditLog.vue';
+import SystemSettings from './admin/SystemSettings.vue';
+import TempmailSettings from './admin/TempmailSettings.vue';
 
 const {
   adminAuth, showAdminAuth, adminTab, loading,
@@ -130,6 +134,12 @@ onMounted(async () => {
           <n-tab-pane name="user_settings" :tab="t('user_settings')">
             <UserSettings />
           </n-tab-pane>
+          <n-tab-pane name="systemSettings" :tab="t('systemSettings')">
+            <SystemSettings />
+          </n-tab-pane>
+          <n-tab-pane name="tempmailSettings" :tab="t('tempmailSettings')">
+            <TempmailSettings />
+          </n-tab-pane>
           <n-tab-pane name="workerconfig" :tab="t('workerconfig')">
             <WorkerConfig />
           </n-tab-pane>
@@ -218,18 +228,28 @@ onMounted(async () => {
         <Appearance />
       </n-tab-pane>
       <n-tab-pane name="adminAccount" :tab="t('adminAccount')">
-        <div style="display: flex; justify-content: center; padding: 20px;">
-          <n-card style="width: 600px;">
-            <n-space vertical>
-              <n-text strong>{{ t('loginMethod') }}</n-text>
-              <n-text>{{ currentLoginMethod }}</n-text>
-              <n-divider v-if="isAdminPasswordLogin" />
-              <n-button v-if="isAdminPasswordLogin" type="warning" @click="showLogoutModal = true" block>
-                {{ t('logout') }}
-              </n-button>
-            </n-space>
-          </n-card>
-        </div>
+        <n-tabs type="bar" justify-content="center" animated>
+          <n-tab-pane name="overview" :tab="t('adminAccountOverview')">
+            <div style="display: flex; justify-content: center; padding: 20px;">
+              <n-card style="width: 600px;">
+                <n-space vertical>
+                  <n-text strong>{{ t('loginMethod') }}</n-text>
+                  <n-text>{{ currentLoginMethod }}</n-text>
+                  <n-divider v-if="isAdminPasswordLogin" />
+                  <n-button v-if="isAdminPasswordLogin" type="warning" @click="showLogoutModal = true" block>
+                    {{ t('logout') }}
+                  </n-button>
+                </n-space>
+              </n-card>
+            </div>
+          </n-tab-pane>
+          <n-tab-pane name="security" :tab="t('accountSecurity')">
+            <AccountSecurity />
+          </n-tab-pane>
+          <n-tab-pane name="auditLog" :tab="t('auditLog')">
+            <AuditLog />
+          </n-tab-pane>
+        </n-tabs>
       </n-tab-pane>
       <n-tab-pane name="about" :tab="t('about')">
         <About />

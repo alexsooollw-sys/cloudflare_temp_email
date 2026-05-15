@@ -12,6 +12,12 @@
 
 ### Features
 
+- feat: |Admin UI| Stage 3 / 1 后端能力终于在管理面板内可用，无需 curl：
+  - **Account & Security** 视图：TOTP 2FA setup 弹窗（otpauth URL + base32 secret 一键复制 + 6 位验证码确认）、disable 流程、修改管理员密码、显示用户名 / 上次登录时间和 IP
+  - **Audit Log** 视图：分页 / action / username 过滤 / `admin_audit_log` 按天清理
+  - **System Settings** 视图：通用 key/value 编辑器，覆盖所有 9 个分类（general/domains/tempmail/email/telegram/oauth/ai/webhook/security），值自动 JSON 解析，敏感项一键加密；附 Telegram bot token / Webhook URL 联通性测试
+  - **TempMail Settings** 视图：专用表单一次性管理 12 个 tempmail 参数（白名单域、TTL、配额、附件大小、公开预览、autorefresh）
+  - 全部 4 个新 view 的 i18n 字符串（~75 个 key）同时提供高质量俄语翻译（不同于现有 `ru = en` 占位）；既有 `views.Admin` 顶部 5 个新 tab 标签也带正式 RU 翻译
 - chore: |Release| 版本号 1.9.0 → 2.0.0：所有 `package.json`、`worker/src/constants.ts` 的 VERSION、SMTP proxy `README.md`、双语 README v2.0 概览 + `MIGRATION_v1_to_v2.md` 全量同步
 - test: |E2E| 为 stage 1–4 新增的 API 表面补齐 Playwright 测试：
   - `tempmail-lifecycle.spec.ts` — 公开 API 全流程（`/domains` 白名单、`/accounts` 创建、`/token` 登录、`/me`、收件箱、单封邮件解析、RFC822 原文、删邮件、删账号、跨 tempmail 账号隔离）

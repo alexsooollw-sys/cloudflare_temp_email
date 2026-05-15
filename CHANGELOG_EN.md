@@ -12,6 +12,12 @@
 
 ### Features
 
+- feat: |Admin UI| Stage 3 / 1 backend capabilities finally usable from the admin panel — no curl required:
+  - **Account & Security** view — TOTP 2FA setup dialog (otpauth URL + base32 secret with one-click copy + 6-digit confirmation), disable flow, change-password form, display of username / last login at / last login IP
+  - **Audit Log** view — paginated table with action / username filters and a per-days cleanup confirmation
+  - **System Settings** view — generic key/value editor across all nine categories (general / domains / tempmail / email / telegram / oauth / ai / webhook / security); values are JSON-parsed when possible, secrets toggle on encryption, plus a Telegram bot token + webhook URL connectivity test
+  - **TempMail Settings** view — task-specific form managing all 12 tempmail knobs in one place (allow-list domains, TTL, quotas, attachment caps, public preview, autorefresh)
+  - All ~75 new i18n keys ship with proper, hand-written Russian translations (in contrast to the existing `ru = en` placeholders); the five new admin tab labels in `views.Admin` get proper RU translations too
 - chore: |Release| Bump version 1.9.0 → 2.0.0: every `package.json`, `worker/src/constants.ts` VERSION, the new SMTP proxy `README.md`, bilingual README "What's new in v2.0" sections and `MIGRATION_v1_to_v2.md` are kept in sync
 - test: |E2E| Add Playwright coverage for the Stage 1–4 surface:
   - `tempmail-lifecycle.spec.ts` — full `/public_api/v1/*` flow (allow-list domains, account create, token login, `/me`, inbox listing, parsed message, raw RFC822, message + account delete, cross-account isolation)

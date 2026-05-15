@@ -712,6 +712,26 @@ export const MESSAGE_REGISTRY = {
       "en": "Webhook Settings",
       "ru": "Webhook Settings"
     },
+    "accountSecurity": {
+      "en": "Account & Security",
+      "ru": "Аккаунт и безопасность"
+    },
+    "adminAccountOverview": {
+      "en": "Overview",
+      "ru": "Обзор"
+    },
+    "auditLog": {
+      "en": "Audit Log",
+      "ru": "Журнал аудита"
+    },
+    "systemSettings": {
+      "en": "System Settings",
+      "ru": "Системные настройки"
+    },
+    "tempmailSettings": {
+      "en": "TempMail Settings",
+      "ru": "Настройки временной почты"
+    },
     "workerconfig": {
       "en": "Worker Config",
       "ru": "Worker Config"
@@ -2558,6 +2578,122 @@ export const MESSAGE_REGISTRY = {
       "en": "If you need help, please contact the administrator ({msg})",
       "ru": "If you need help, please contact the administrator ({msg})"
     }
+  },
+  "views.admin.AccountSecurity": {
+    "title": { "en": "Admin account", "ru": "Учётная запись администратора" },
+    "username": { "en": "Username", "ru": "Имя пользователя" },
+    "twofaStatus": { "en": "Two-factor auth (TOTP)", "ru": "Двухфакторная аутентификация (TOTP)" },
+    "twofaOn": { "en": "Enabled", "ru": "Включена" },
+    "twofaOff": { "en": "Disabled", "ru": "Отключена" },
+    "lastLoginAt": { "en": "Last login", "ru": "Последний вход" },
+    "lastLoginIp": { "en": "Last login IP", "ru": "IP последнего входа" },
+    "enable2fa": { "en": "Enable 2FA", "ru": "Включить 2FA" },
+    "disable2fa": { "en": "Disable 2FA", "ru": "Отключить 2FA" },
+    "setupTitle": { "en": "Set up 2FA", "ru": "Настройка 2FA" },
+    "setupHint": {
+      "en": "Add the otpauth URL or secret below to your authenticator app (Google Authenticator, Authy, 1Password, etc.) and then enter a 6-digit code to confirm.",
+      "ru": "Добавьте отображаемую otpauth-ссылку или секрет в приложение-аутентификатор (Google Authenticator, Authy, 1Password и т. д.) и введите 6-значный код для подтверждения."
+    },
+    "otpauthLabel": { "en": "otpauth:// URL", "ru": "otpauth:// ссылка" },
+    "secretLabel": { "en": "Secret (base32)", "ru": "Секрет (base32)" },
+    "confirmCodeLabel": { "en": "6-digit code", "ru": "6-значный код" },
+    "codePlaceholder": { "en": "000000", "ru": "000000" },
+    "copy": { "en": "Copy", "ru": "Копировать" },
+    "copied": { "en": "Copied", "ru": "Скопировано" },
+    "cancel": { "en": "Cancel", "ru": "Отмена" },
+    "confirmCta": { "en": "Confirm and enable", "ru": "Подтвердить и включить" },
+    "twofaEnabled": { "en": "2FA enabled", "ru": "2FA включена" },
+    "twofaDisabled": { "en": "2FA disabled", "ru": "2FA отключена" },
+    "disableTitle": { "en": "Disable 2FA", "ru": "Отключение 2FA" },
+    "codeFormat": { "en": "Enter exactly 6 digits", "ru": "Введите ровно 6 цифр" },
+    "changePasswordTitle": { "en": "Change password", "ru": "Смена пароля" },
+    "currentPassword": { "en": "Current password", "ru": "Текущий пароль" },
+    "newPassword": { "en": "New password", "ru": "Новый пароль" },
+    "confirmPassword": { "en": "Confirm new password", "ru": "Подтвердите новый пароль" },
+    "passwordRequired": { "en": "Fill in both passwords", "ru": "Заполните оба пароля" },
+    "passwordMismatch": { "en": "Passwords don't match", "ru": "Пароли не совпадают" },
+    "passwordChanged": { "en": "Password updated", "ru": "Пароль обновлён" },
+    "changePasswordCta": { "en": "Update password", "ru": "Обновить пароль" }
+  },
+  "views.admin.AuditLog": {
+    "createdAt": { "en": "When", "ru": "Когда" },
+    "username": { "en": "Username", "ru": "Имя пользователя" },
+    "action": { "en": "Action", "ru": "Действие" },
+    "target": { "en": "Target", "ru": "Цель" },
+    "details": { "en": "Details", "ru": "Подробности" },
+    "actionFilter": { "en": "Filter by action", "ru": "Фильтр по действию" },
+    "usernameFilter": { "en": "Filter by username", "ru": "Фильтр по имени пользователя" },
+    "refresh": { "en": "Refresh", "ru": "Обновить" },
+    "cleanupCta": { "en": "Cleanup", "ru": "Очистить" },
+    "cleanupDaysPlaceholder": { "en": "days", "ru": "дней" },
+    "cleanupConfirm": {
+      "en": "Delete audit-log rows older than {days} days?",
+      "ru": "Удалить записи журнала аудита старше {days} дней?"
+    },
+    "cleanupSuccess": { "en": "Removed {count} rows", "ru": "Удалено {count} записей" },
+    "invalidDays": { "en": "Days must be ≥ 1", "ru": "Количество дней должно быть ≥ 1" },
+    "confirm": { "en": "Confirm", "ru": "Подтвердить" },
+    "cancel": { "en": "Cancel", "ru": "Отмена" }
+  },
+  "views.admin.SystemSettings": {
+    "hint": {
+      "en": "Free-form key/value store with optional AES-GCM encryption (TG bot tokens, OAuth secrets, …). Values are JSON-parsed when possible — use bare scalars (`true`, `42`, `\"text\"`) or arrays/objects.",
+      "ru": "Универсальное хранилище конфигурации с опциональным AES-GCM шифрованием (токены TG-бота, OAuth secrets и т. д.). Значения при сохранении JSON-парсятся — используйте скаляры (`true`, `42`, `\"строка\"`) или JSON массивы / объекты."
+    },
+    "keyCol": { "en": "Key", "ru": "Ключ" },
+    "valueCol": { "en": "Value", "ru": "Значение" },
+    "categoryCol": { "en": "Category", "ru": "Категория" },
+    "encrypted": { "en": "Encrypted", "ru": "Шифрованное" },
+    "yes": { "en": "Yes", "ru": "Да" },
+    "no": { "en": "No", "ru": "Нет" },
+    "updatedAt": { "en": "Updated", "ru": "Обновлено" },
+    "actions": { "en": "Actions", "ru": "Действия" },
+    "edit": { "en": "Edit", "ru": "Изменить" },
+    "delete": { "en": "Delete", "ru": "Удалить" },
+    "add": { "en": "Add", "ru": "Добавить" },
+    "addTitle": { "en": "Add setting", "ru": "Добавить настройку" },
+    "editTitle": { "en": "Edit setting", "ru": "Изменить настройку" },
+    "keyRequired": { "en": "Key is required", "ru": "Ключ обязателен" },
+    "keyPlaceholder": { "en": "e.g. tempmail.allowed_domains", "ru": "например, tempmail.allowed_domains" },
+    "valuePlaceholder": {
+      "en": "JSON value, scalar, or string (\"true\", `42`, [\"a.com\"])",
+      "ru": "JSON значение, скаляр или строка (\"true\", `42`, [\"a.com\"])"
+    },
+    "encryptedValuePlaceholder": {
+      "en": "Plaintext value — will be encrypted on save",
+      "ru": "Открытый текст — будет зашифрован при сохранении"
+    },
+    "saved": { "en": "Saved", "ru": "Сохранено" },
+    "deleted": { "en": "Deleted", "ru": "Удалено" },
+    "save": { "en": "Save", "ru": "Сохранить" },
+    "cancel": { "en": "Cancel", "ru": "Отмена" },
+    "refresh": { "en": "Refresh", "ru": "Обновить" },
+    "testTelegram": { "en": "Test Telegram", "ru": "Проверить Telegram" },
+    "testWebhook": { "en": "Test Webhook", "ru": "Проверить Webhook" },
+    "promptTgToken": { "en": "Telegram bot token to test:", "ru": "Введите токен Telegram-бота:" },
+    "promptWebhookUrl": { "en": "Webhook URL to test (POST {}):", "ru": "URL webhook для проверки (POST {}):" },
+    "tgOk": { "en": "Telegram OK · @{bot}", "ru": "Telegram OK · @{bot}" }
+  },
+  "views.admin.TempmailSettings": {
+    "title": { "en": "TempMail settings", "ru": "Настройки временной почты" },
+    "hint": {
+      "en": "These knobs power /public_api/v1/* — the anonymous mailbox API used by tempmail.domain.com. All values are persisted in the system_settings table under the `tempmail` category.",
+      "ru": "Эти параметры управляют /public_api/v1/* — API анонимных ящиков для tempmail.domain.com. Все значения сохраняются в таблице system_settings в категории `tempmail`."
+    },
+    "allowedDomains": { "en": "Allowed domains", "ru": "Разрешённые домены" },
+    "accountTtl": { "en": "Account TTL (hours)", "ru": "Срок жизни ящика (часов)" },
+    "maxMessages": { "en": "Max messages per inbox", "ru": "Макс. писем в ящике" },
+    "rpm": { "en": "Requests per minute", "ru": "Запросов в минуту" },
+    "rps": { "en": "Requests per second", "ru": "Запросов в секунду" },
+    "accountsPerDay": { "en": "Accounts per day per IP", "ru": "Ящиков в день на IP" },
+    "maxAttachment": { "en": "Max attachment (MB)", "ru": "Макс. размер вложения (МБ)" },
+    "maxBody": { "en": "Max message body (MB)", "ru": "Макс. размер тела письма (МБ)" },
+    "enablePublicPreview": { "en": "Enable public preview", "ru": "Публичные превью на лендинге" },
+    "publicPreviewCount": { "en": "Public preview count", "ru": "Количество превью" },
+    "enableAutorefresh": { "en": "Enable inbox auto-refresh", "ru": "Авто-обновление входящих" },
+    "autorefreshInterval": { "en": "Auto-refresh interval (s)", "ru": "Интервал авто-обновления (с)" },
+    "save": { "en": "Save", "ru": "Сохранить" },
+    "saved": { "en": "Saved", "ru": "Сохранено" }
   }
 } as const
 
