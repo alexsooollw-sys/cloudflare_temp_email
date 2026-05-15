@@ -6,10 +6,13 @@
   <a href="CHANGELOG_EN.md">English</a>
 </p>
 
-## v1.9.0(main)
+## v2.0.0(main)
+
+> **重大版本**：完成 [`PLAN.md`](./PLAN.md) 描述的 5 阶段重构 — 多站点 Pages 前端、公开 REST API、TOTP 2FA、Swagger UI、AES-GCM 加密配置。详细迁移步骤见 [`MIGRATION_v1_to_v2.md`](./MIGRATION_v1_to_v2.md)；既有 v1.x 部署可平滑升级（无破坏性数据库迁移、env-var 通道继续工作）。
 
 ### Features
 
+- chore: |Release| 版本号 1.9.0 → 2.0.0：所有 `package.json`、`worker/src/constants.ts` 的 VERSION、SMTP proxy `README.md`、双语 README v2.0 概览 + `MIGRATION_v1_to_v2.md` 全量同步
 - test: |E2E| 为 stage 1–4 新增的 API 表面补齐 Playwright 测试：
   - `tempmail-lifecycle.spec.ts` — 公开 API 全流程（`/domains` 白名单、`/accounts` 创建、`/token` 登录、`/me`、收件箱、单封邮件解析、RFC822 原文、删邮件、删账号、跨 tempmail 账号隔离）
   - `swagger-docs.spec.ts` — `/public_api/openapi.json` 返回合法 3.1 规范，`/public_api/docs` 返回引用同一规范的 Swagger UI HTML

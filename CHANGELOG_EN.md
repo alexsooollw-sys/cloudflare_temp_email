@@ -6,10 +6,13 @@
   <a href="CHANGELOG_EN.md">English</a>
 </p>
 
-## v1.9.0(main)
+## v2.0.0(main)
+
+> **Major release**: ships the five-stage refactor described in [`PLAN.md`](./PLAN.md) — multi-site Pages frontend, public REST API, TOTP 2FA, Swagger UI, AES-GCM-encrypted config. See [`MIGRATION_v1_to_v2.md`](./MIGRATION_v1_to_v2.md) for the upgrade procedure; existing v1.x deployments can roll forward without destructive database changes and the env-var paths keep working.
 
 ### Features
 
+- chore: |Release| Bump version 1.9.0 → 2.0.0: every `package.json`, `worker/src/constants.ts` VERSION, the new SMTP proxy `README.md`, bilingual README "What's new in v2.0" sections and `MIGRATION_v1_to_v2.md` are kept in sync
 - test: |E2E| Add Playwright coverage for the Stage 1–4 surface:
   - `tempmail-lifecycle.spec.ts` — full `/public_api/v1/*` flow (allow-list domains, account create, token login, `/me`, inbox listing, parsed message, raw RFC822, message + account delete, cross-account isolation)
   - `swagger-docs.spec.ts` — `/public_api/openapi.json` is a valid 3.1 spec; `/public_api/docs` ships an HTML page that loads the same spec via SwaggerUIBundle

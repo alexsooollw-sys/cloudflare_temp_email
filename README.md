@@ -44,9 +44,20 @@
 - **Agent 友好** - 内置邮箱 [`skill`](skills/cf-temp-mail-agent-mail/SKILL.md)，方便 AI agent 使用邮箱
 - **移动端管理** - 社区客户端 [CloudMail](https://github.com/Lur1N77777/CloudMail)，支持 Android 管理后台和邮箱管理
 
+## ✨ v2.0 新增
+
+* **多站点部署** — `admin.domain.com` / `mail.domain.com` / `tempmail.domain.com` 三个独立 Cloudflare Pages 项目，共用同一个 Worker API。详见 [DEPLOY.md](./DEPLOY.md) 与 [迁移指南](./MIGRATION_v1_to_v2.md)。
+* **公开 REST API** — `/public_api/v1/*` 为匿名（mail.tm 风格）临时邮箱提供完整生命周期接口，附 `/public_api/docs` Swagger UI。
+* **管理员安全** — TOTP 2FA + KV 反爆破 + `admin_audit_log` 审计日志，敏感配置通过 AES-GCM 加密存于 `system_settings` 表。
+* **Material Design 3 主题层** — 共享包提供 Light / Dark / **AMOLED** 三档模式 + 8 种 accent 色，已应用于新的 mail / tempmail 站点。
+* **前端 monorepo** — `frontend/packages/{admin,shared,mail,tempmail}` (pnpm workspaces)；既有 admin 控制台保持 Naive UI 实现，无破坏性改动。
+* **i18n 收敛** — 仅保留 EN（默认）与 RU 两种 UI 语言。
+
+完整变更见 [CHANGELOG.md](./CHANGELOG.md)。
+
 ## 部署文档 - 快速开始
 
-[部署文档](https://temp-mail-docs.awsl.uk) | [Github Action 部署文档](https://temp-mail-docs.awsl.uk/zh/guide/actions/github-action.html)
+[部署文档](https://temp-mail-docs.awsl.uk) | [Github Action 部署文档](https://temp-mail-docs.awsl.uk/zh/guide/actions/github-action.html) | [多站点部署指南](./DEPLOY.md)
 
 <a href="https://temp-mail-docs.awsl.uk/zh/guide/actions/github-action.html">
   <img src="https://deploy.workers.cloudflare.com/button" alt="Deploy to Cloudflare Workers" height="32">

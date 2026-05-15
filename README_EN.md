@@ -44,9 +44,20 @@
 - **Agent-friendly** - Built-in mailbox [`skill`](skills/cf-temp-mail-agent-mail/SKILL.md) for AI agents
 - **Mobile admin** - Community client [CloudMail](https://github.com/Lur1N77777/CloudMail) for Android admin and mailbox management
 
+## ✨ New in v2.0
+
+* **Multi-site deployment** — `admin.domain.com` / `mail.domain.com` / `tempmail.domain.com` are now three independent Cloudflare Pages projects backed by a single shared Worker API. See [DEPLOY.md](./DEPLOY.md) and the [migration guide](./MIGRATION_v1_to_v2.md).
+* **Public REST API** — `/public_api/v1/*` exposes the full lifecycle for anonymous (mail.tm-style) mailboxes, with interactive Swagger UI at `/public_api/docs`.
+* **Admin security** — TOTP 2FA + KV-backed brute-force protection + `admin_audit_log`. Secrets in the new `system_settings` table are AES-GCM encrypted with a `JWT_SECRET`-derived key.
+* **Material Design 3 theming** — shared package exposes Light / Dark / **AMOLED** modes plus 8 accent colours; already applied to the new mail / tempmail sites.
+* **Frontend monorepo** — `frontend/packages/{admin,shared,mail,tempmail}` (pnpm workspaces). The existing admin panel keeps its Naive UI implementation; no breaking changes for v1.x deployments.
+* **i18n cleanup** — UI is limited to English (default) and Russian.
+
+See [CHANGELOG_EN.md](./CHANGELOG_EN.md) for the full list of changes.
+
 ## Deployment Documentation - Quick Start
 
-[Documentation](https://temp-mail-docs.awsl.uk) | [Github Action Deployment Guide](https://temp-mail-docs.awsl.uk/en/guide/actions/github-action.html)
+[Documentation](https://temp-mail-docs.awsl.uk) | [Github Action Deployment Guide](https://temp-mail-docs.awsl.uk/en/guide/actions/github-action.html) | [Multi-site deployment](./DEPLOY.md)
 
 <a href="https://temp-mail-docs.awsl.uk/en/guide/actions/github-action.html">
   <img src="https://deploy.workers.cloudflare.com/button" alt="Deploy to Cloudflare Workers" height="32">
