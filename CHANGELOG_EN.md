@@ -12,6 +12,7 @@
 
 ### Features
 
+- feat: |i18n RU| Full Russian translation of every user-facing admin string: 611/626 keys (97.6%) upgraded from the `ru = en` placeholder produced by Stage 1 to real, hand-written Russian. The remaining 15 strings are intentionally identical to the English form — brand names, technical abbreviations (STARTTLS, SMTP / IMAP, OK, HTML) and numeric placeholders (000000). `message-registry.ts` grows by ~12 KiB minified (admin chunk 1340 → 1352 KiB).
 - feat: |Admin UI| Stage 3 / 1 backend capabilities finally usable from the admin panel — no curl required:
   - **Account & Security** view — TOTP 2FA setup dialog (otpauth URL + base32 secret with one-click copy + 6-digit confirmation), disable flow, change-password form, display of username / last login at / last login IP
   - **Audit Log** view — paginated table with action / username filters and a per-days cleanup confirmation
