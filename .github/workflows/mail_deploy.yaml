@@ -73,7 +73,7 @@ jobs:
           cd frontend/packages/mail/
           pnpm exec wrangler pages deploy ./dist \
             --project-name="$PROJECT_NAME" \
-            --branch production \
+            --branch main \
             --commit-dirty=true
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
