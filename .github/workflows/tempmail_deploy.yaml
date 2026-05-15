@@ -51,6 +51,20 @@ jobs:
           pnpm install --no-frozen-lockfile
           pnpm --filter @cte/tempmail run build
 
+      - name: Ensure Pages project exists
+        run: |
+          cd frontend/packages/tempmail/
+          if ! pnpm exec wrangler pages project list 2>/dev/null | grep -q "$PROJECT_NAME"; then
+            echo "Creating Pages project $PROJECT_NAME ..."
+            pnpm exec wrangler pages project create "$PROJECT_NAME" \
+              --production-branch production || true
+          else
+            echo "Pages project $PROJECT_NAME already exists"
+          fi
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
       - name: Deploy to Cloudflare Pages
         run: |
           cd frontend/packages/tempmail/
