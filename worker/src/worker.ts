@@ -10,6 +10,7 @@ import { api as userApi } from './user_api';
 import { api as adminApi } from './admin_api';
 import { api as apiSendMail } from './mails_api/send_mail_api'
 import { api as telegramApi } from './telegram_api'
+import { api as publicApi } from './public_api'
 
 import i18n from './i18n';
 import { email } from './email';
@@ -24,6 +25,20 @@ const API_PATHS = [
 	"/admin/",
 	"/telegram/",
 	"/external/",
+	"/public_api/",
+];
+
+// Endpoints that take their JWT from the `Authorization: Bearer` header and
+// require an authenticated tempmail address.
+const PUBLIC_API_AUTH_PATHS = [
+	"/public_api/v1/me",
+];
+
+// Endpoints rate-limited per IP (in addition to other public_api endpoints
+// which are throttled by their handlers).
+const PUBLIC_API_RATE_LIMITED_PATHS = [
+	"/public_api/v1/accounts",
+	"/public_api/v1/token",
 ];
 
 const app = new Hono<HonoCustomType>()
@@ -67,6 +82,7 @@ app.use('/*', async (c, next) => {
 		|| c.req.path.startsWith("/external/api/send_mail")
 		|| c.req.path.startsWith("/user_api/register")
 		|| c.req.path.startsWith("/user_api/verify_code")
+		|| PUBLIC_API_RATE_LIMITED_PATHS.some((p) => c.req.path.startsWith(p))
 	) {
 		const reqIp = c.req.raw.headers.get("cf-connecting-ip")
 		if (reqIp && c.env.RATE_LIMITER) {
@@ -253,6 +269,29 @@ app.use('/admin/*', async (c, next) => {
 });
 
 
+// public_api auth — only /public_api/v1/me* paths need a Bearer token
+app.use('/public_api/*', async (c, next) => {
+	if (!PUBLIC_API_AUTH_PATHS.some((p) => c.req.path.startsWith(p))) {
+		await next();
+		return;
+	}
+	const lang = c.get("lang") || c.env.DEFAULT_LANG;
+	const msgs = i18n.getMessages(lang);
+	try {
+		const authHeader = c.req.raw.headers.get("authorization") || "";
+		const token = authHeader.toLowerCase().startsWith("bearer ")
+			? authHeader.slice(7).trim()
+			: "";
+		if (!token) return c.text(msgs.InvalidAddressCredentialMsg, 401);
+		const payload = await Jwt.verify(token, c.env.JWT_SECRET, "HS256");
+		c.set("jwtPayload", payload);
+		await next();
+	} catch (e) {
+		console.warn("public_api auth failed", e);
+		return c.text(msgs.InvalidAddressCredentialMsg, 401);
+	}
+});
+
 app.route('/', commonApi)
 app.route('/', openAuthApi)
 app.route('/', mailsApi)
@@ -260,6 +299,7 @@ app.route('/', userApi)
 app.route('/', adminApi)
 app.route('/', apiSendMail)
 app.route('/', telegramApi)
+app.route('/', publicApi)
 
 const health_check = async (c: Context<HonoCustomType>) => {
 	const lang = c.req.raw.headers.get("x-lang") || c.env.DEFAULT_LANG;

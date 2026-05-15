@@ -98,6 +98,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 { text: '什么是临时邮箱', link: 'what-is-temp-mail' },
                 { text: 'Star History', link: 'star-history' },
                 { text: '快速开始部署', link: 'quick-start' },
+                { text: '多站点部署 (admin / mail / tempmail)', link: 'multi-site-setup' },
             ]
         },
         {
@@ -181,6 +182,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 { text: 'AI Agent 使用邮箱', link: 'feature/agent-email' },
                 { text: '发送邮件 API', link: 'feature/send-mail-api' },
                 { text: '删除邮箱地址 API', link: 'feature/delete-address' },
+                { text: '公开 API (tempmail)', link: 'feature/public-api' },
             ]
         },
         {

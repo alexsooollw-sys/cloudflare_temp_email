@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS address (
     name TEXT UNIQUE,
     password TEXT,
     source_meta TEXT,
+    is_tempmail INTEGER DEFAULT 0,
+    tempmail_expires_at DATETIME,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
@@ -31,6 +33,12 @@ CREATE INDEX IF NOT EXISTS idx_address_created_at ON address(created_at);
 CREATE INDEX IF NOT EXISTS idx_address_updated_at ON address(updated_at);
 
 CREATE INDEX IF NOT EXISTS idx_address_source_meta ON address(source_meta);
+
+CREATE INDEX IF NOT EXISTS idx_address_is_tempmail ON address(is_tempmail);
+
+CREATE INDEX IF NOT EXISTS idx_address_tempmail_expires_at
+    ON address(tempmail_expires_at)
+    WHERE is_tempmail = 1;
 
 CREATE TABLE IF NOT EXISTS auto_reply_mails (
     id INTEGER PRIMARY KEY,

@@ -10,6 +10,13 @@
 
 ### Features
 
+- feat: |Refactor 阶段 2| 完成多站点骨架：tempmail 公开 REST API（`/public_api/v1/*`）、`@cte/mail` 与 `@cte/tempmail` 两个 Vuetify 3 Pages 项目、`DEPLOY.md` 部署指南、vitepress 多站点设置与公开 API 文档（中英文）。admin 控制台保留 Naive UI 实现，Vuetify 化迁移留待后续 PR。
+- feat: |Worker| 新增 `/public_api/v1/*` 端点（匿名 tempmail mail.tm 风格）：`/domains`、`/accounts`、`/token`、`/me`、`/me/messages` 全套 CRUD、`/me/messages/:id/source`（RFC822 原文）、`/public/recent_messages` 着陆页预览
+- feat: |Worker| `address` 表新增 `is_tempmail` / `tempmail_expires_at` 列（迁移 `db/2026-05-14-tempmail.sql`），`scheduled` cron 会自动清理过期匿名邮箱及其全部数据
+- feat: |Worker| tempmail 配置全部走数据库（`tempmail.allowed_domains`、`accounts_per_day_per_ip`、`account_ttl_hours`、`rpm`、`rps`、`max_attachment_mb`、`max_body_mb`、`enable_public_preview` 等），默认保守，可在阶段 2.5 admin Vuetify 化后通过 UI 调整
+- feat: |Mail UI| `@cte/mail` 包提供 notletters 风格的居中登录卡 + 收件箱 + 改密码 + 主题/语言切换，复用现有 `/api/address_login`、`/api/parsed_mails`、`/api/parsed_mail/:id`、`/api/address_change_password` 端点
+- feat: |Tempmail UI| `@cte/tempmail` 包提供 mail.tm 风格的着陆页 + 创建/登录弹窗 + 收件箱 + 自动刷新 + 公开预览，全部通过 `/public_api/v1/*` 通信，自带 EN/RU 双语
+- feat: |Docs| 新增 `DEPLOY.md`（仓库根目录）与 `vitepress-docs` 的 `guide/multi-site-setup.md`、`guide/feature/public-api.md`（EN + ZH），覆盖 DNS / Email Routing / 三套 Pages 部署 / 数据库迁移 / 初次管理员配置流程
 - feat: |Refactor| 启动多阶段重构（详见 `PLAN.md`）：阶段 1 落地 monorepo / i18n / 主题 / Vuetify 基础 / 数据库化配置；阶段 2 拆分三个独立 Pages 站点（admin / mail / tempmail）并完成 MD3 重设计；阶段 3 引入 TOTP 2FA、反爆破、公开 REST API + Swagger
 - feat: |Frontend| 将前端拆分为 pnpm workspaces monorepo：`packages/admin`（沿用现有 Naive UI 管理后台）、`packages/shared`（共享 MD3 主题/i18n/工具）、`packages/mail` 与 `packages/tempmail`（Vuetify 3 stub，阶段 2 完整实现）
 - feat: |i18n| 仅保留 EN（默认）与 RU 两种 UI 语言，删除 zh / es / ja / de / pt-BR；message-registry 通过脚本批量改造为 en+ru 结构，俄文初始等于英文文案，留作后续翻译 PR

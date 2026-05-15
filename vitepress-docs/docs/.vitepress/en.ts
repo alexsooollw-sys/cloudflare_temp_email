@@ -98,6 +98,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 { text: 'What is Temporary Email', link: 'what-is-temp-mail' },
                 { text: 'Star History', link: 'star-history' },
                 { text: 'Quick Start', link: 'quick-start' },
+                { text: 'Multi-site Setup (admin / mail / tempmail)', link: 'multi-site-setup' },
             ]
         },
         {
@@ -181,6 +182,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 { text: 'AI Agent Mailbox Usage', link: 'feature/agent-email' },
                 { text: 'Send Email API', link: 'feature/send-mail-api' },
                 { text: 'Delete Address API', link: 'feature/delete-address' },
+                { text: 'Public API (tempmail)', link: 'feature/public-api' },
             ]
         },
         {

@@ -79,4 +79,40 @@ export async function scheduled(event: ScheduledEvent, env: Bindings, ctx: any) 
             }
         }
     }
+
+    // Always-on: delete expired tempmail (anonymous) accounts and their data.
+    // Tempmail accounts have is_tempmail=1 and tempmail_expires_at < now().
+    await cleanupExpiredTempmail(env);
+}
+
+const cleanupExpiredTempmail = async (env: Bindings): Promise<void> => {
+    try {
+        const condition =
+            `is_tempmail = 1 AND tempmail_expires_at IS NOT NULL ` +
+            `AND datetime(tempmail_expires_at) < datetime('now')`;
+
+        await env.DB.prepare(
+            `DELETE FROM raw_mails WHERE address IN (SELECT name FROM address WHERE ${condition})`,
+        ).run();
+        await env.DB.prepare(
+            `DELETE FROM sendbox WHERE address IN (SELECT name FROM address WHERE ${condition})`,
+        ).run();
+        await env.DB.prepare(
+            `DELETE FROM auto_reply_mails WHERE address IN (SELECT name FROM address WHERE ${condition})`,
+        ).run();
+        await env.DB.prepare(
+            `DELETE FROM address_sender WHERE address IN (SELECT name FROM address WHERE ${condition})`,
+        ).run();
+        await env.DB.prepare(
+            `DELETE FROM users_address WHERE address_id IN (SELECT id FROM address WHERE ${condition})`,
+        ).run();
+        const { meta } = await env.DB.prepare(
+            `DELETE FROM address WHERE ${condition}`,
+        ).run();
+        if (meta?.changes && meta.changes > 0) {
+            console.log(`Tempmail cleanup: removed ${meta.changes} expired accounts`);
+        }
+    } catch (e) {
+        console.error("Tempmail cleanup failed:", e);
+    }
 }

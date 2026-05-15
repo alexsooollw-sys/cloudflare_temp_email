@@ -42,6 +42,26 @@ export const CONSTANTS = {
         "webhook",
         "security",
     ] as const,
+
+    // tempmail (public API for anonymous mail.tm-style mailboxes) settings keys
+    // — all live in system_settings under category="tempmail".
+    TEMPMAIL_SETTINGS: {
+        ALLOWED_DOMAINS: "tempmail.allowed_domains",
+        ACCOUNT_TTL_HOURS: "tempmail.account_ttl_hours",
+        MAX_MESSAGES_PER_ACCOUNT: "tempmail.max_messages_per_account",
+        RPM: "tempmail.rpm",
+        RPS: "tempmail.rps",
+        ACCOUNTS_PER_DAY_PER_IP: "tempmail.accounts_per_day_per_ip",
+        MAX_ATTACHMENT_MB: "tempmail.max_attachment_mb",
+        MAX_BODY_MB: "tempmail.max_body_mb",
+        ENABLE_PUBLIC_PREVIEW: "tempmail.enable_public_preview",
+        PUBLIC_PREVIEW_COUNT: "tempmail.public_preview_count",
+        ENABLE_AUTOREFRESH: "tempmail.enable_autorefresh",
+        AUTOREFRESH_INTERVAL_SEC: "tempmail.autorefresh_interval_sec",
+    } as const,
+
+    // KV key prefix for tempmail per-IP throttling counters.
+    TEMPMAIL_KV_PREFIX: "tempmail:",
 }
 
 export type SystemSettingCategory = (typeof CONSTANTS.SYSTEM_SETTINGS_CATEGORIES)[number]
