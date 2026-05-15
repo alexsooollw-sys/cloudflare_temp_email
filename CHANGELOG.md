@@ -10,6 +10,13 @@
 
 ### Features
 
+- feat: |Refactor 阶段 3 安全| 管理员 2FA + 反爆破 + 审计日志：
+  - 新增 `admin_accounts` 表（用户名 / 哈希密码 / 加密 TOTP 密钥 / 失败次数 / 锁定到期），`/open_api/admin_login` 在原有 env-var 通道之上新增 DB 凭证流；启用 2FA 时返回 `{ require_totp, challenge }` 短期挑战，`/open_api/admin_login_totp` 校验 6 位 RFC 6238 TOTP 后下发 12 小时 admin session JWT
+  - TOTP 模块 `worker/src/auth/totp.ts` 完全基于 Web Crypto，已对 RFC 6238 全部 5 条 SHA-1 测试向量与 8 位变体逐一通过验证
+  - KV 反爆破：`worker/src/auth/brute_force.ts` 按 (kind, ip, identifier) 计数，admin 5 次 / 15 分钟硬锁，附 `Retry-After` 头；`admin_accounts` 行内同时维护 `failed_attempts` / `locked_until` 双重防护
+  - 审计日志：`admin_audit_log` 表 + `worker/src/auth/audit_log.ts` 助手；`/admin/audit_log` 提供分页只读查询，按 action / username 过滤，`DELETE` 触发按天清理
+  - 新 admin 接口：`/admin/2fa/{status,setup,confirm,disable}`、`/admin/account/change_password`；TOTP 密钥落库前以 AES-GCM 加密（沿用 stage 1 的 `JWT_SECRET` 派生 key）
+  - `worker/src/worker.ts` 在 `/admin/*` 中间件中新增 `x-admin-session` 头识别，session JWT 与现有 `x-admin-auth` 兼容并存
 - feat: |Refactor 阶段 2| 完成多站点骨架：tempmail 公开 REST API（`/public_api/v1/*`）、`@cte/mail` 与 `@cte/tempmail` 两个 Vuetify 3 Pages 项目、`DEPLOY.md` 部署指南、vitepress 多站点设置与公开 API 文档（中英文）。admin 控制台保留 Naive UI 实现，Vuetify 化迁移留待后续 PR。
 - feat: |Worker| 新增 `/public_api/v1/*` 端点（匿名 tempmail mail.tm 风格）：`/domains`、`/accounts`、`/token`、`/me`、`/me/messages` 全套 CRUD、`/me/messages/:id/source`（RFC822 原文）、`/public/recent_messages` 着陆页预览
 - feat: |Worker| `address` 表新增 `is_tempmail` / `tempmail_expires_at` 列（迁移 `db/2026-05-14-tempmail.sql`），`scheduled` cron 会自动清理过期匿名邮箱及其全部数据

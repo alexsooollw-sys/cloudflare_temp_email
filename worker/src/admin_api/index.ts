@@ -19,6 +19,8 @@ import ip_blacklist_settings from './ip_blacklist_settings'
 import ai_extract_settings from './ai_extract_settings'
 import e2e_test_api from './e2e_test_api'
 import system_settings from './system_settings'
+import two_factor from './two_factor'
+import audit_log_api from './audit_log_api'
 
 export const api = new Hono<HonoCustomType>()
 
@@ -113,3 +115,14 @@ api.get('/admin/system/settings', system_settings.list)
 api.post('/admin/system/settings', system_settings.save)
 api.delete('/admin/system/settings/:key', system_settings.remove)
 api.post('/admin/system/test', system_settings.test)
+
+// 2FA (TOTP) and admin account self-service
+api.get('/admin/2fa/status', two_factor.status)
+api.post('/admin/2fa/setup', two_factor.setup)
+api.post('/admin/2fa/confirm', two_factor.confirm)
+api.post('/admin/2fa/disable', two_factor.disable)
+api.post('/admin/account/change_password', two_factor.changePassword)
+
+// Audit log (read-only + cleanup)
+api.get('/admin/audit_log', audit_log_api.list)
+api.delete('/admin/audit_log', audit_log_api.cleanup)

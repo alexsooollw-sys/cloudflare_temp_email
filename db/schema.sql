@@ -92,6 +92,39 @@ CREATE TABLE IF NOT EXISTS system_settings (
 
 CREATE INDEX IF NOT EXISTS idx_system_settings_category ON system_settings(category);
 
+CREATE TABLE IF NOT EXISTS admin_accounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    totp_secret TEXT,
+    totp_enabled INTEGER DEFAULT 0,
+    failed_attempts INTEGER DEFAULT 0,
+    locked_until DATETIME,
+    last_login_at DATETIME,
+    last_login_ip TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_admin_accounts_username ON admin_accounts(username);
+
+CREATE TABLE IF NOT EXISTS admin_audit_log (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    admin_id INTEGER,
+    username TEXT,
+    action TEXT NOT NULL,
+    target TEXT,
+    ip TEXT,
+    user_agent TEXT,
+    success INTEGER DEFAULT 1,
+    details TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_admin_audit_log_admin_id ON admin_audit_log(admin_id);
+CREATE INDEX IF NOT EXISTS idx_admin_audit_log_created_at ON admin_audit_log(created_at);
+CREATE INDEX IF NOT EXISTS idx_admin_audit_log_action ON admin_audit_log(action);
+
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY,
     user_email TEXT UNIQUE NOT NULL,

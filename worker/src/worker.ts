@@ -231,13 +231,31 @@ app.use('/user_api/*', async (c, next) => {
 // admin auth
 app.use('/admin/*', async (c, next) => {
 
-	// check header x-admin-auth
+	// check header x-admin-auth (legacy env-var path)
 	if (checkIsAdmin(c)) {
 		await next();
 		return;
 	}
+
 	const lang = c.req.raw.headers.get("x-lang") || c.env.DEFAULT_LANG;
 	const msgs = i18n.getMessages(lang);
+
+	// check Stage 3 admin session JWT (issued by /open_api/admin_login)
+	const sessionHeader = c.req.raw.headers.get("x-admin-session");
+	if (sessionHeader) {
+		try {
+			const payload = await Jwt.verify(sessionHeader, c.env.JWT_SECRET, "HS256");
+			if (payload?.kind === "admin_session"
+				&& typeof payload.admin_id === "number"
+				&& payload.exp && payload.exp > Math.floor(Date.now() / 1000)) {
+				await next();
+				return;
+			}
+		} catch (e) {
+			console.warn("admin session verification failed", e);
+		}
+	}
+
 	// check if user is admin
 	const access_token = c.req.raw.headers.get("x-user-access-token");
 	if (c.env.ADMIN_USER_ROLE && access_token) {

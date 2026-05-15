@@ -10,6 +10,13 @@
 
 ### Features
 
+- feat: |Refactor stage 3 — security| Admin 2FA + brute-force protection + audit log:
+  - New `admin_accounts` table (username, password hash, AES-GCM-encrypted TOTP secret, failed-attempts counter, lockout). `/open_api/admin_login` adds a DB credential path next to the existing env-var path; when 2FA is enabled it returns a short-lived `{ require_totp, challenge }` and `/open_api/admin_login_totp` validates the 6-digit RFC 6238 code, then issues a 12-hour admin session JWT
+  - TOTP implementation in `worker/src/auth/totp.ts` is pure Web Crypto and passes all five RFC 6238 SHA-1 test vectors (plus the 8-digit variant), verified locally
+  - KV-based brute-force guard `worker/src/auth/brute_force.ts` counts (kind, ip, identifier) failures: admin login locks for 15 minutes after 5 failures with a `Retry-After` header. `admin_accounts.failed_attempts` / `locked_until` columns provide the same protection per row
+  - Audit log: `admin_audit_log` table + `worker/src/auth/audit_log.ts` helper; new `/admin/audit_log` endpoint gives a paginated read-only view (filterable by action / username) and `DELETE /admin/audit_log?days=N` prunes old rows
+  - New admin endpoints: `/admin/2fa/{status,setup,confirm,disable}` and `/admin/account/change_password`. TOTP secrets are AES-GCM-encrypted before persistence using the Stage 1 `JWT_SECRET`-derived key
+  - `worker/src/worker.ts` `/admin/*` middleware now recognises an `x-admin-session` Bearer header alongside the legacy `x-admin-auth` env-var path so admins can choose either flow
 - feat: |Refactor stage 2| Land the multi-site skeleton: tempmail public REST API under `/public_api/v1/*`, two new Vuetify 3 Pages projects (`@cte/mail` + `@cte/tempmail`), top-level `DEPLOY.md`, and vitepress docs for multi-site setup + the public API (EN + ZH). The Naive UI admin panel is intentionally kept as-is — the Vuetify migration of admin is deferred to a follow-up PR
 - feat: |Worker| Add `/public_api/v1/*` endpoints powering the anonymous tempmail (mail.tm-style) flow: `/domains`, `/accounts`, `/token`, `/me`, full CRUD on `/me/messages`, `/me/messages/:id/source` (RFC822 raw), `/public/recent_messages` landing-page preview
 - feat: |Worker| Two new `address` columns (`is_tempmail`, `tempmail_expires_at`) via migration `db/2026-05-14-tempmail.sql`; the existing scheduled cron now also drops expired anonymous mailboxes and all of their data
