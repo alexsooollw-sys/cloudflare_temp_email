@@ -10,6 +10,10 @@
 
 ### Features
 
+- test: |E2E| 为 stage 1–4 新增的 API 表面补齐 Playwright 测试：
+  - `tempmail-lifecycle.spec.ts` — 公开 API 全流程（`/domains` 白名单、`/accounts` 创建、`/token` 登录、`/me`、收件箱、单封邮件解析、RFC822 原文、删邮件、删账号、跨 tempmail 账号隔离）
+  - `swagger-docs.spec.ts` — `/public_api/openapi.json` 返回合法 3.1 规范，`/public_api/docs` 返回引用同一规范的 Swagger UI HTML
+  - `admin-2fa.spec.ts` — admin_login + 2FA setup/confirm（含错误码 401）、challenge → admin_login_totp、session JWT 通过 `x-admin-session` 头进入 admin、disable 2FA、`/admin/audit_log` 至少包含一条登录失败记录
 - feat: |Refactor 阶段 4 — API 文档| 为 `/public_api/v1/*` 提供交互式文档：手写的 OpenAPI 3.1 规范挂载在 `/public_api/openapi.json`（位于 `worker/src/public_api/openapi.ts`，与 handlers 同处一个目录便于同步更新），加上 CDN 拉取的 Swagger UI 页面 `/public_api/docs`。无需引入 `@hono/zod-openapi`，worker bundle 体积仅 +5 KiB
 - feat: |Refactor 阶段 3 安全| 管理员 2FA + 反爆破 + 审计日志：
   - 新增 `admin_accounts` 表（用户名 / 哈希密码 / 加密 TOTP 密钥 / 失败次数 / 锁定到期），`/open_api/admin_login` 在原有 env-var 通道之上新增 DB 凭证流；启用 2FA 时返回 `{ require_totp, challenge }` 短期挑战，`/open_api/admin_login_totp` 校验 6 位 RFC 6238 TOTP 后下发 12 小时 admin session JWT

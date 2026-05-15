@@ -10,6 +10,10 @@
 
 ### Features
 
+- test: |E2E| Add Playwright coverage for the Stage 1–4 surface:
+  - `tempmail-lifecycle.spec.ts` — full `/public_api/v1/*` flow (allow-list domains, account create, token login, `/me`, inbox listing, parsed message, raw RFC822, message + account delete, cross-account isolation)
+  - `swagger-docs.spec.ts` — `/public_api/openapi.json` is a valid 3.1 spec; `/public_api/docs` ships an HTML page that loads the same spec via SwaggerUIBundle
+  - `admin-2fa.spec.ts` — admin_login → 2FA setup/confirm (with the expected 401 on a wrong code), challenge → admin_login_totp, session JWT acceptance via `x-admin-session`, 2FA disable, `/admin/audit_log` returns rows including the failed login attempt
 - feat: |Refactor stage 4 — API docs| Interactive Swagger UI for the `/public_api/v1/*` surface: hand-rolled OpenAPI 3.1 spec served from `/public_api/openapi.json` (in `worker/src/public_api/openapi.ts`, kept next to the handlers so they stay in sync) plus a static Swagger UI page at `/public_api/docs` that loads `swagger-ui-dist` from the official jsDelivr CDN. No `@hono/zod-openapi` rewrite needed — worker bundle grows only ~5 KiB
 - feat: |Refactor stage 3 — security| Admin 2FA + brute-force protection + audit log:
   - New `admin_accounts` table (username, password hash, AES-GCM-encrypted TOTP secret, failed-attempts counter, lockout). `/open_api/admin_login` adds a DB credential path next to the existing env-var path; when 2FA is enabled it returns a short-lived `{ require_totp, challenge }` and `/open_api/admin_login_totp` validates the 6-digit RFC 6238 code, then issues a 12-hour admin session JWT
